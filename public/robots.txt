@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://planare.dev
+
+# Sitemaps
+Sitemap: https://planare.dev/sitemap.xml
