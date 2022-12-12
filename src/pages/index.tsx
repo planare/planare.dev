@@ -1,10 +1,12 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { useState } from 'react';
 
 import { Email, GitHub, Phone } from '../components/icons';
 import { Layout, theme } from '../components/Theme';
 
 export default function Home(): JSX.Element {
+  const [showWeather, setShowWeather] = useState(false);
   return (
     <Layout>
       <Head>
@@ -25,8 +27,32 @@ export default function Home(): JSX.Element {
             sizes='(max-width: 600px) 100vw, 600px'
           />
 
-          <b>✺ Brooklyn, NY</b>
+          <div
+            onClick={(): void => setShowWeather(!showWeather)}
+            style={{ cursor: 'pointer' }}>
+            <p>
+              <b>✺ Brooklyn, NY</b>
+            </p>
+          </div>
         </div>
+        {showWeather && (
+          <div style={{ marginTop: theme.spacing.normal }}>
+            <p style={{ display: 'inline-block', marginRight: theme.spacing.smallest }}>
+              Sunny, 32°F
+            </p>
+            <p style={{ display: 'inline-block' }}>
+              {new Date(new Date()).toLocaleTimeString('en-US', {
+                day: 'numeric',
+                hour: 'numeric',
+                hour12: true,
+                minute: 'numeric',
+                month: 'short',
+                timeZone: 'America/New_York',
+                year: 'numeric',
+              })}
+            </p>
+          </div>
+        )}
         <div style={{ marginTop: theme.spacing.normal }}>
           <p>
             We develop apps and websites for startups and not-for-profits. We value
@@ -38,14 +64,16 @@ export default function Home(): JSX.Element {
             serving each team&apos;s unique needs throughout their growth cycle.
           </p>
           <p>
-            Planare is closed for new projects until early 2023. If you would like to
-            get in touch, please reach out to us at our contact information below.
+            Planare is <i>closed</i> for new projects until early 2023. If you would
+            like to get in touch, please reach out to us at our contact information
+            below.
           </p>
         </div>
+
         <div style={{ marginTop: theme.spacing.normal }}>
           <p>
             <span style={{ marginRight: theme.spacing.smallest }}>
-              <GitHub />
+              <Email />
             </span>
             <a href='mailto:mail@planare.dev' target='_blank' rel='noreferrer'>
               mail@planare.dev
@@ -61,7 +89,7 @@ export default function Home(): JSX.Element {
           </p>
           <p>
             <span style={{ marginRight: theme.spacing.smallest }}>
-              <Email />
+              <GitHub />
             </span>
             <a href='https://github.com/planare' target='_blank' rel='noreferrer'>
               github.com/planare
