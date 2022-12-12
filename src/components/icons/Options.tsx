@@ -1,4 +1,4 @@
-export const Options = () => {
+export const Options = (): JSX.Element => {
   return (
     <svg
       fill='none'

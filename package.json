@@ -26,7 +26,8 @@
     "eslint-config-dolmios": "^1.3.1",
     "eslint-config-next": "latest",
     "next-sitemap": "^3.1.32",
-    "prettier": "^2.8.1"
+    "prettier": "^2.8.1",
+    "@typescript-eslint/eslint-plugin": "^5.46.1"
   },
   "homepage": "https://planare.dev",
   "keywords": [

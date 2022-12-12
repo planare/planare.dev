@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+
 import { Icon } from './icons';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -28,13 +29,13 @@ export default function Weather({
       month: 'short',
       year: 'numeric',
     }),
+    description: data.weather[0].description || 'unknown',
+    temperature: data.main.temp || 0,
     time: new Date(data.dt * 1000).toLocaleTimeString('en-US', {
       hour: 'numeric',
       hour12: true,
       minute: 'numeric',
     }),
-    description: data.weather[0].description || 'unknown',
-    temperature: data.main.temp || 0,
   };
 
   return (
