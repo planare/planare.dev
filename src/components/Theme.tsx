@@ -32,12 +32,9 @@ const Standard = localFont({
 
 export const theme = {
   colors: {
-    background: 'rgb(255,255,255)',
-    border: 'rgba(0,0,0,0.5)',
-    button: '#000',
-    hover: '#000',
-    tag: 'rgba(80, 80, 80, 0)',
-    text: 'rgb(0,0,0)',
+    background: '#f4f7ff',
+    border: '#00005a',
+    text: '#00005a',
   },
   fontFamily: {
     mono: 'Menlo, Monaco, monospace',
@@ -52,7 +49,7 @@ export const theme = {
   },
 };
 
-const global = css.global`
+export const global = css.global`
   html,
   body {
     padding: 0;
@@ -92,9 +89,8 @@ const global = css.global`
     }
   }
   section {
-    border: 0.1rem solid ${theme.colors.border};
+    border: 0.1rem dashed ${theme.colors.border};
     border-radius: 0.5rem;
-    background-color: ${theme.colors.tag};
     padding: 2rem;
     max-width: 40rem;
   }
@@ -117,7 +113,7 @@ const global = css.global`
   }
   a:hover {
     color: ${theme.colors.text};
-    border-bottom: 0.1rem solid ${theme.colors.border};
+    border-bottom: 0.1rem dashed ${theme.colors.border};
   }
   svg {
     vertical-align: middle;

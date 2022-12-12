@@ -2,11 +2,13 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useState } from 'react';
 
-import { Email, GitHub, Phone } from '../components/icons';
+import { Icon } from '../components/icons';
 import { Layout, theme } from '../components/Theme';
+import Weather from '../components/Weather';
 
 export default function Home(): JSX.Element {
   const [showWeather, setShowWeather] = useState(false);
+
   return (
     <Layout>
       <Head>
@@ -20,7 +22,7 @@ export default function Home(): JSX.Element {
             justifyContent: 'space-between',
           }}>
           <Image
-            src='/logo.png'
+            src='/inline.png'
             alt={''}
             width={1442 * 0.075}
             height={544 * 0.075}
@@ -31,28 +33,11 @@ export default function Home(): JSX.Element {
             onClick={(): void => setShowWeather(!showWeather)}
             style={{ cursor: 'pointer' }}>
             <p>
-              <b>✺ Brooklyn, NY</b>
+              <b>&#10042; Brooklyn, NY</b>
             </p>
           </div>
         </div>
-        {showWeather && (
-          <div style={{ marginTop: theme.spacing.normal }}>
-            <p style={{ display: 'inline-block', marginRight: theme.spacing.smallest }}>
-              Sunny, 32°F
-            </p>
-            <p style={{ display: 'inline-block' }}>
-              {new Date(new Date()).toLocaleTimeString('en-US', {
-                day: 'numeric',
-                hour: 'numeric',
-                hour12: true,
-                minute: 'numeric',
-                month: 'short',
-                timeZone: 'America/New_York',
-                year: 'numeric',
-              })}
-            </p>
-          </div>
-        )}
+
         <div style={{ marginTop: theme.spacing.normal }}>
           <p>
             We develop apps and websites for startups and not-for-profits. We value
@@ -70,29 +55,38 @@ export default function Home(): JSX.Element {
           </p>
         </div>
 
-        <div style={{ marginTop: theme.spacing.normal }}>
+        <div style={{ marginTop: theme.spacing.small }}>
+          {showWeather ? (
+            <Weather latitute={40.6782} longitude={-73.9442} />
+          ) : (
+            <small>&nbsp;</small>
+          )}
+        </div>
+
+        <div>
           <p>
-            <span style={{ marginRight: theme.spacing.smallest }}>
-              <Email />
+            <span style={{ marginRight: theme.spacing.small }}>
+              <Icon.Email />
             </span>
             <a href='mailto:mail@planare.dev' target='_blank' rel='noreferrer'>
               mail@planare.dev
             </a>
           </p>
           <p>
-            <span style={{ marginRight: theme.spacing.smallest }}>
-              <Phone />
+            <span style={{ marginRight: theme.spacing.small }}>
+              <Icon.Phone />
             </span>
-            <a href='tel:+19294389964' target='_blank' rel='noreferrer'>
-              929.438.9964
-            </a>
+            929.999.7420
           </p>
-          <p>
-            <span style={{ marginRight: theme.spacing.smallest }}>
-              <GitHub />
+          <p style={{ marginBottom: 0 }}>
+            <span
+              style={{
+                marginRight: theme.spacing.small,
+              }}>
+              <Icon.GitHub />
             </span>
             <a href='https://github.com/planare' target='_blank' rel='noreferrer'>
-              github.com/planare
+              github.com&#47;planare
             </a>
           </p>
         </div>
