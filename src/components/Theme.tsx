@@ -34,6 +34,8 @@ export const theme = {
   colors: {
     background: '#f4f7ff',
     border: '#00005a',
+    night: '#00001e',
+    nightBorder: 'rgba(255, 255, 255, 0.3)',
     text: '#00005a',
   },
   fontFamily: {
@@ -119,6 +121,36 @@ export const global = css.global`
     vertical-align: middle;
     height: 1rem;
     width: 1rem;
+  }
+  .logo-dark {
+    display: none;
+  }
+  .logo {
+    display: block;
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: ${theme.colors.night};
+      color: ${theme.colors.background};
+    }
+    section {
+      border-color: ${theme.colors.nightBorder};
+    }
+    a,
+    a:visited,
+    a:active {
+      color: ${theme.colors.background};
+    }
+    a:hover {
+      color: ${theme.colors.background};
+      border-bottom: 0.1rem dashed ${theme.colors.nightBorder};
+    }
+    .logo-dark {
+      display: block;
+    }
+    .logo {
+      display: none;
+    }
   }
 `;
 

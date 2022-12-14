@@ -22,7 +22,16 @@ export default function Home(): JSX.Element {
             justifyContent: 'space-between',
           }}>
           <Image
+            className='logo'
             src='/inline.png'
+            alt={''}
+            width={1442 * 0.075}
+            height={544 * 0.075}
+            sizes='(max-width: 600px) 100vw, 600px'
+          />
+          <Image
+            className='logo-dark'
+            src='/inline-inverse.png'
             alt={''}
             width={1442 * 0.075}
             height={544 * 0.075}
