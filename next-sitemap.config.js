@@ -5,5 +5,5 @@
 module.exports = {
   generateIndexSitemap: false,
   generateRobotsTxt: true,
-  siteUrl: 'https://planare.dev',
+  siteUrl: "https://planare.dev",
 };

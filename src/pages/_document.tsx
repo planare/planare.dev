@@ -1,5 +1,12 @@
-import Document, { Html, Head, Main, NextScript, DocumentInitialProps, DocumentContext } from 'next/document';
-import React, { ReactElement } from 'react';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentInitialProps,
+  DocumentContext,
+} from "next/document";
+import React, { ReactElement } from "react";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -8,41 +15,41 @@ export default class MyDocument extends Document {
   }
 
   render(): ReactElement {
-    const domain = 'https://planare.dev';
-    const title = 'Planare';
+    const domain = "https://planare.dev";
+    const title = "Planare";
     const description =
-      'Planare is a web development office based in Brooklyn, NY. We focus on helping startups and not-for-profits to build apps and websites that scale.';
+      "Planare is a web development office based in Brooklyn, NY. We focus on helping startups and not-for-profits to build apps and websites that scale.";
     return (
-      <Html lang='en'>
+      <Html lang="en">
         <Head>
-          <meta charSet='utf-8' />
-          <meta http-equiv='x-ua-compatible' content='ie=edge' />
+          <meta charSet="utf-8" />
+          <meta content="ie=edge" http-equiv="x-ua-compatible" />
 
           <meta
-            name='description'
-            content='Planare is a web development office based in Brooklyn, NY. We focus on helping startups and not-for-profits to build apps and websites that scale.'
+            content="Planare is a web development office based in Brooklyn, NY. We focus on helping startups and not-for-profits to build apps and websites that scale."
+            name="description"
           />
 
-          <meta property='og:url' content={domain} />
-          <meta property='og:title' content={title} />
-          <meta property='og:description' content={description} />
-          <meta property='og:site_name' content={title} />
-          <meta property='og:image' content={`${domain}/meta.jpg`} />
-          <meta property='og:type' content='website' />
-          <meta property='og:locale' content='en_US' />
+          <meta content={domain} property="og:url" />
+          <meta content={title} property="og:title" />
+          <meta content={description} property="og:description" />
+          <meta content={title} property="og:site_name" />
+          <meta content={`${domain}/meta.jpg`} property="og:image" />
+          <meta content="website" property="og:type" />
+          <meta content="en_US" property="og:locale" />
 
-          <meta name='twitter:card' content='summary' />
-          <meta name='twitter:title' content='Planare' />
-          <meta name='twitter:description' content={description} />
-          <meta name='twitter:image' content={`${domain}/meta.jpg`} />
+          <meta content="summary" name="twitter:card" />
+          <meta content="Planare" name="twitter:title" />
+          <meta content={description} name="twitter:description" />
+          <meta content={`${domain}/meta.jpg`} name="twitter:image" />
 
-          <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
-          <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
-          <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
-          <link rel='manifest' href='/site.webmanifest' />
-          <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#00005a' />
-          <meta name='msapplication-TileColor' content='#2b5797' />
-          <meta name='theme-color' content='#f4f7ff' />
+          <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+          <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+          <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+          <link href="/site.webmanifest" rel="manifest" />
+          <link color="#00005a" href="/safari-pinned-tab.svg" rel="mask-icon" />
+          <meta content="#2b5797" name="msapplication-TileColor" />
+          <meta content="#f4f7ff" name="theme-color" />
         </Head>
         <body>
           <Main />

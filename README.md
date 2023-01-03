@@ -35,8 +35,8 @@ Feel free to get in touch with feedback, advice or suggestions. See [Conventiona
 
 ## Acknowledgments
 
-- [mono-icons](https://github.com/mono-company/mono-icons)
-- [brycewilner's Standard](https://github.com/brycewilner/Standard)
+- [mono-company/mono-icons](https://github.com/mono-company/mono-icons)
+- [brycewilner/Standard](https://github.com/brycewilner/Standard)
 
 ## License
 

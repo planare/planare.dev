@@ -1,47 +1,39 @@
-import useSWR from 'swr';
-
-import { Icon } from './icons';
+import useSWR from "swr";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const fetcher = (url: string): Promise<any> => fetch(url).then((res) => res.json());
-export default function Weather({
+export default function useWeather({
   latitute,
   longitude,
 }: {
   latitute: number;
   longitude: number;
-}): JSX.Element {
+}): {
+  results: {
+    description: string;
+    fetched: string;
+    temp: number;
+    wind: number;
+  };
+} {
   const { data } = useSWR(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitute}&lon=${longitude}&units=imperial&appid=${process.env.NEXT_PUBLIC_OW_API}`,
     fetcher
   );
 
-  if (!data)
-    return (
-      <span style={{ opacity: 0.35 }}>
-        <Icon.Options />
-      </span>
-    );
+  const results = {
+    temp: data?.main?.temp?.toFixed(0) || 0,
+    description: data?.weather?.[0]?.description || "",
+    wind: data?.wind?.speed?.toFixed(0) || 0,
 
-  const weatherData = {
-    date: new Date(data.dt * 1000).toLocaleDateString('en-US', {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric',
-    }),
-    description: data.weather[0].description || 'unknown',
-    temperature: data.main.temp || 0,
-    time: new Date(data.dt * 1000).toLocaleTimeString('en-US', {
-      hour: 'numeric',
-      hour12: true,
-      minute: 'numeric',
+    fetched: new Date().toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "numeric",
+      timeZone: "America/New_York",
     }),
   };
 
-  return (
-    <small style={{ opacity: 0.7 }}>
-      {weatherData.temperature.toFixed(0)}°F with {weatherData.description} at{' '}
-      {weatherData.time} on {weatherData.date}.
-    </small>
-  );
+  return {
+    results,
+  };
 }
