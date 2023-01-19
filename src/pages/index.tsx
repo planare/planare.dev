@@ -55,14 +55,9 @@ export default function Home(): JSX.Element {
         </div>
 
         <p style={{ marginTop: theme.spacing.small }}>
-          Planare is a development agency founded in 2022 by{" "}
-          <a href="https://dolmios.com">
-            Jackson Dolman
-            <Icon.External style={{ marginLeft: 4.5, marginRight: 6 }} />
-          </a>
-          that develops apps and websites for a deliberately small roster of startups and
-          not-for-profits. We focus on shipping projects that are coherent, scalable, and meaningful
-          to users.
+          Planare is a development agency founded in 2022 that develops apps and websites for a
+          small roster of startups and not-for-profits. We focus on shipping projects that are
+          coherent, scalable, and meaningful to users.
         </p>
         <p>
           In our first year, we launched a portfolio management app,{" "}
