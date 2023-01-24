@@ -118,7 +118,8 @@ export default function Home(): JSX.Element {
         <aside style={{ marginTop: theme.spacing.normal }}>
           <Icon.Flag />
           <small style={{ marginLeft: theme.spacing.smallest, opacity: 0.6 }}>
-            &copy; {new Date().getFullYear()} Planare LLC. 11237 + 19709
+            &copy; {new Date().getFullYear()} Planare LLC.{" "}
+            <a href="/privacy-policy">Privacy Information</a>
           </small>
         </aside>
       </section>

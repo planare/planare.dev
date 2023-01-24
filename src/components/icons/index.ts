@@ -1,5 +1,3 @@
-// export Email, Phone, Refresh, GitHub icons as Icon.Email, Icon.Phone, Icon.Refresh, Icon.GitHub respectively
-
 import { Email } from "./Email";
 import { External } from "./External";
 import { Flag } from "./Flag";

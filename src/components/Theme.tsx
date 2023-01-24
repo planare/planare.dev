@@ -76,13 +76,20 @@ export const global = css.global`
   }
 
   button {
-    border: none;
-    background: none;
+    border: 0.1rem solid ${theme.colors.border};
+    background: ${theme.colors.text};
+    color: ${theme.colors.background};
     padding: 0;
     font: inherit;
-    color: inherit;
     cursor: pointer;
     outline: inherit;
+    padding: calc(${theme.spacing.smallest} / 3) calc(${theme.spacing.smallest} / 1.5);
+    border-radius: ${theme.spacing.smallest};
+  }
+
+  button:hover {
+    background: ${theme.colors.background};
+    color: ${theme.colors.text};
   }
 
   img {
@@ -96,9 +103,9 @@ export const global = css.global`
   }
 
   section {
-    max-width: 42rem;
-    padding: ${theme.spacing.normal};
-    border: 0.1rem dashed ${theme.colors.border};
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
     border-radius: ${theme.spacing.smallest};
   }
   img {
@@ -147,7 +154,6 @@ export const global = css.global`
       display: block;
     }
     section {
-      padding: 1.75rem;
       width: 100%;
     }
   }
