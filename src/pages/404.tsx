@@ -12,7 +12,7 @@ export default function Custom404(): JSX.Element {
       <section>
         <h1>This page could not be found.</h1>
         <p>
-          <Link href="/">&#9756; planare.dev</Link>
+          <Link href="/">planare.dev</Link>
         </p>
       </section>
     </Layout>

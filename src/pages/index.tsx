@@ -39,7 +39,7 @@ export default function Home(): JSX.Element {
             width={1442 * 0.075}
           />
           <button type="button" onClick={(): void => setShowWeather(!showWeather)}>
-            Brooklyn, NY
+            {results?.emoji}&nbsp; Brooklyn
           </button>
         </div>
         <div style={{ marginTop: theme.spacing.small, opacity: 0.6 }}>
@@ -53,12 +53,16 @@ export default function Home(): JSX.Element {
             <small>&nbsp;</small>
           )}
         </div>
-
-        <p style={{ marginTop: theme.spacing.small }}>
-          Planare is a development agency founded in 2022 that develops apps and websites for a
-          small roster of startups and not-for-profits. We focus on shipping projects that are
-          coherent, scalable, and meaningful to users.
+        <h1 style={{ marginTop: theme.spacing.small }}>
+          Planare is a development agency that builds apps and websites.
+        </h1>
+        <p>
+          {" "}
+          We focus on shipping projects that are coherent, scalable, and meaningful to users. Our
+          team is based in New York and we work with startup founders to help them build great
+          products.
         </p>
+
         <p>
           In our first year, we launched a portfolio management app,{" "}
           <a href="https://cosmogroup.io" rel="noreferrer" target="_blank">
@@ -70,11 +74,9 @@ export default function Home(): JSX.Element {
             component library
             <Icon.External style={{ marginLeft: 4.5, marginRight: 6 }} />
           </a>
-          for Cosmo, a rapidly growing short-term property rental startup.
+          for Cosmo, a rapidly growing vacation rental company from Melbourne, Australia.
         </p>
-        <p>
-          Feel free to get in touch if you want to discuss a project, ask questions, or talk shop.
-        </p>
+        <p>If you have any questions or would like to talk shop, please get in touch.</p>
 
         <div style={{ marginTop: theme.spacing.small }}>
           <a href="mailto:mail@planare.dev" rel="noreferrer" target="_blank">
@@ -98,7 +100,7 @@ export default function Home(): JSX.Element {
                 paddingLeft: theme.spacing.small,
                 marginBottom: 0,
               }}>
-              929.999.7420
+              (929) 999-7420
             </p>
           </a>
         </div>
@@ -119,7 +121,8 @@ export default function Home(): JSX.Element {
           <Icon.Flag />
           <small style={{ marginLeft: theme.spacing.smallest, opacity: 0.6 }}>
             &copy; {new Date().getFullYear()} Planare LLC.{" "}
-            <a href="/privacy-policy">Privacy Information</a>
+            <a href="/privacy-policy">Privacy Information</a>.{" "}
+            <a href="https://planare.dev/billing">Manage your billing</a>.
           </small>
         </aside>
       </section>

@@ -76,6 +76,7 @@ export const global = css.global`
   }
 
   button {
+    transition: all 0.42s ease-in-out;
     border: 0.1rem solid ${theme.colors.border};
     background: ${theme.colors.text};
     color: ${theme.colors.background};
@@ -108,6 +109,7 @@ export const global = css.global`
     padding: 1rem;
     border-radius: ${theme.spacing.smallest};
   }
+
   img {
     object-fit: fit !important;
     object-position: center;
@@ -141,6 +143,16 @@ export const global = css.global`
     a:hover {
       color: ${theme.colors.background};
     }
+    button {
+      border-color: ${theme.colors.nightBorder};
+      background: ${theme.colors.background};
+      color: ${theme.colors.night};
+    }
+    button:hover {
+      background: ${theme.colors.night};
+      color: ${theme.colors.background};
+    }
+
     .logo-dark {
       display: block;
     }

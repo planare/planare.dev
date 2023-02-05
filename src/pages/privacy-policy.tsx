@@ -43,15 +43,58 @@ export default function PrivacyPolicy(): JSX.Element {
         {isMounted && cookies === "" ? (
           <div>
             <p>
-              Planare does not use cookies. We exclusively use Vercel Analytics to track the number
-              of visitors to our site, but we do not collect any data that can be used to personally
-              identify a visitor.
+              We are committed to your privacy. We do not use cookies, and we do not share any
+              information gathered from our website with third parties.
             </p>
-            <a href="https://vercel.com/docs/concepts/analytics/audiences">
-              Learn more about Vercel Analytics <Icon.External />
-            </a>
+            <p>
+              We use Vercel Analytics to see how many people visit our site, and where they come
+              from. Instead of relying on cookies like many analytics products, visitors are
+              identified by a hash created from the incoming request, which resets daily. Using a
+              generated hash provides a privacy-friendly experience for our visitors and means that
+              they can&apos;t be tracked between different days or different websites.
+            </p>
+            <ul>
+              <li>
+                <strong>Browser</strong>:{" "}
+                {navigator?.userAgent || "You are using an unknown browser"}
+              </li>
+              <li>
+                <strong>Operating System</strong>:{" "}
+                {navigator?.platform || "You are using an unknown operating system"}
+              </li>
+              <li>
+                <strong>Screen Resolution</strong>:{" "}
+                {`${window?.screen?.width}x${window?.screen?.height}`}
+              </li>
+              <li>
+                <strong>Timezone</strong>: {Intl.DateTimeFormat().resolvedOptions().timeZone}
+              </li>
+              <li>
+                <strong>Language</strong>: {navigator?.language}
+              </li>
+              <li>
+                <strong>Referrer</strong>: {document?.referrer || "No referrer"}
+              </li>
+              <li>
+                <strong>URL</strong>: {window?.location?.href}
+              </li>
+            </ul>
+            <p>
+              <a href="https://vercel.com/docs/concepts/analytics">
+                Learn more about Vercel Analytics <Icon.External />
+              </a>
+            </p>
+            <small
+              style={{
+                opacity: 0.5,
+              }}>
+              https://vercel.com/docs/concepts/analytics
+            </small>
+            <p style={{ marginTop: theme.spacing.large }}>
+              <Link href="/">planare.dev</Link>
+            </p>
           </div>
-        ) : (
+        ) : isMounted && cookies !== "" ? (
           <div>
             <p>
               We found some straggling cookies, you can remove all of them by clicking the button
@@ -84,10 +127,11 @@ export default function PrivacyPolicy(): JSX.Element {
               Purge
             </button>
           </div>
+        ) : (
+          <div>
+            <p>Loading...</p>
+          </div>
         )}
-        <p style={{ marginTop: theme.spacing.large }}>
-          <Link href="/">&#9756; planare.dev</Link>
-        </p>
       </section>
     </Layout>
   );
