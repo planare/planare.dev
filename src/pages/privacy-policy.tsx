@@ -43,14 +43,12 @@ export default function PrivacyPolicy(): JSX.Element {
         {isMounted && cookies === "" ? (
           <div>
             <p>
-              We are committed to your privacy. We do not use cookies, and we do not share any
-              information gathered from our website with third parties.
+              Planare doesn&apos;t use cookies.
             </p>
             <p>
-              We use Vercel Analytics to see how many people visit our site, and where they come
-              from. Instead of relying on cookies like many analytics products, visitors are
+              We use Vercel Analytics to see how many people visit our site. Visitors are
               identified by a hash created from the incoming request, which resets daily. Using a
-              generated hash provides a privacy-friendly experience for our visitors and means that
+              generated hash provides a privacy-friendly alternative to cookies ensuring that
               they can&apos;t be tracked between different days or different websites.
             </p>
             <ul>
