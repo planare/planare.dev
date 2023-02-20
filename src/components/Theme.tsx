@@ -52,7 +52,7 @@ export const global = css.global`
     margin: 0;
     font-family: ${theme.fontFamily.sansSerif};
     line-height: 1.4;
-    font-size: 16px;
+    font-size: 15px;
     color: ${theme.colors.text};
     background-color: ${theme.colors.background};
   }
@@ -106,8 +106,6 @@ export const global = css.global`
   section {
     max-width: 50rem;
     margin: 0 auto;
-    padding: 1rem;
-    border-radius: ${theme.spacing.smallest};
   }
 
   img {
@@ -144,13 +142,13 @@ export const global = css.global`
       color: ${theme.colors.background};
     }
     button {
-      border-color: ${theme.colors.nightBorder};
-      background: ${theme.colors.background};
-      color: ${theme.colors.night};
-    }
-    button:hover {
       background: ${theme.colors.night};
       color: ${theme.colors.background};
+      border-color: ${theme.colors.nightBorder};
+    }
+    button:hover {
+      background: ${theme.colors.background};
+      color: ${theme.colors.night};
     }
 
     .logo-dark {
