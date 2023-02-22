@@ -53,14 +53,37 @@ export default function Home(): JSX.Element {
             <small>&nbsp;</small>
           )}
         </div>
+
         <h1 style={{ marginTop: theme.spacing.small }}>
-          Planare is a development agency that builds apps and websites.
+          Planare is a development shop that builds apps and websites.
         </h1>
+        <div
+          className="spin"
+          style={{
+            fontSize: "50px",
+            opacity: 0.15,
+            height: "50px",
+            width: "50px",
+            position: "fixed",
+            // cente
+            right: "0",
+            bottom: "0",
+            left: "0",
+            top: "0",
+            margin: "auto",
+            display: "block",
+          }}>
+          💻
+        </div>
         <p>
-          {" "}
           We focus on shipping projects that are coherent, scalable, and meaningful to users. Our
           team is based in New York and we work with startup founders to help them build great
           products.
+        </p>
+        <p>
+          Our pricing is flat and transparent. We charge a fixed rate for each project, which
+          includes research, development, deployment and launch support. Our hourly rate is $150,
+          and a typical project runs between $25,000 and $75,000 depending on the scope.
         </p>
 
         <p>

@@ -1,23 +1,11 @@
-import localFont from "@next/font/local";
+import { Martian_Mono } from "@next/font/google";
 import { ReactNode } from "react";
 import css from "styled-jsx/css";
 
-const Standard = localFont({
-  display: "swap",
-  fallback: ["system-ui", "sans-serif"],
-  preload: true,
-  src: [
-    {
-      path: "../fonts/standard-bold.woff2",
-      style: "normal",
-      weight: "700",
-    },
-    {
-      path: "../fonts/standard-book.woff2",
-      style: "normal",
-      weight: "400",
-    },
-  ],
+const Martian = Martian_Mono({
+  fallback: ["monospace"],
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const theme = {
@@ -29,8 +17,7 @@ export const theme = {
     text: "rgb(0,0,90)",
   },
   fontFamily: {
-    mono: "Menlo, Monaco, monospace",
-    sansSerif: Standard.style.fontFamily,
+    mono: Martian.style.fontFamily,
   },
   spacing: {
     large: "4rem",
@@ -50,9 +37,9 @@ export const global = css.global`
   body {
     padding: 0;
     margin: 0;
-    font-family: ${theme.fontFamily.sansSerif};
+    font-family: ${theme.fontFamily.mono};
     line-height: 1.4;
-    font-size: 15px;
+    font-size: 16px;
     color: ${theme.colors.text};
     background-color: ${theme.colors.background};
   }
@@ -104,7 +91,7 @@ export const global = css.global`
   }
 
   section {
-    max-width: 50rem;
+    max-width: 70rem;
     margin: 0 auto;
   }
 
@@ -124,6 +111,19 @@ export const global = css.global`
   }
   .logo {
     display: block;
+  }
+
+  // css keyframes
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .spin {
+    animation: spin 7s linear infinite;
   }
   @media (prefers-color-scheme: dark) {
     body {

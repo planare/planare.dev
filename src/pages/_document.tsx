@@ -23,7 +23,6 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <meta content="ie=edge" http-equiv="x-ua-compatible" />
 
           <meta
             content="Planare is a web development office based in Brooklyn, NY. We focus on helping startups and not-for-profits to build apps and websites that scale."
