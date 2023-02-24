@@ -60,7 +60,7 @@ export default function Home(): JSX.Element {
         <div
           className="spin"
           style={{
-            fontSize: "50px",
+            fontSize: "75px",
             opacity: 0.15,
             height: "50px",
             width: "50px",
@@ -83,7 +83,7 @@ export default function Home(): JSX.Element {
         <p>
           Our pricing is flat and transparent. We charge a fixed rate for each project, which
           includes research, development, deployment and launch support. Our hourly rate is $150,
-          and a typical project runs between $25,000 and $75,000 depending on the scope.
+          and a typical project runs between $15,000 and $50,000 depending on the scope.
         </p>
 
         <p>
