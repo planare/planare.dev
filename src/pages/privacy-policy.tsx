@@ -80,12 +80,6 @@ export default function PrivacyPolicy(): JSX.Element {
                 Learn more about Vercel Analytics <Icon.External />
               </a>
             </p>
-            <small
-              style={{
-                opacity: 0.5,
-              }}>
-              https://vercel.com/docs/concepts/analytics
-            </small>
             <p style={{ marginTop: theme.spacing.large }}>
               <Link href="/">planare.dev</Link>
             </p>

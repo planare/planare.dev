@@ -82,8 +82,8 @@ export default function Home(): JSX.Element {
         </p>
         <p>
           Our pricing is flat and transparent. We charge a fixed rate for each project, which
-          includes research, development, deployment and launch support. Our hourly rate is $150,
-          and a typical project runs between $15,000 and $50,000 depending on the scope.
+          includes research, development, deployment and launch support. Our hourly rate is $150 for
+          development, and $120 for consulting.
         </p>
 
         <p>

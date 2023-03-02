@@ -1,11 +1,11 @@
-import { Martian_Mono } from "@next/font/google";
+import { BIZ_UDPMincho } from "@next/font/google";
 import { ReactNode } from "react";
 import css from "styled-jsx/css";
 
-const Martian = Martian_Mono({
+const serif = BIZ_UDPMincho({
   fallback: ["monospace"],
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400"],
 });
 
 export const theme = {
@@ -15,9 +15,8 @@ export const theme = {
     night: "rgb(0,0,30)",
     nightBorder: "rgba(244, 247, 255, 0.33)",
     text: "rgb(0,0,90)",
-  },
-  fontFamily: {
-    mono: Martian.style.fontFamily,
+    link: "rgb(116, 66, 71)",
+    nightLink: "rgb(217, 167, 172)",
   },
   spacing: {
     large: "4rem",
@@ -31,14 +30,14 @@ export const theme = {
 export const global = css.global`
   * {
     box-sizing: border-box;
+    font-weight: 400 !important;
   }
 
-  html,
   body {
     padding: 0;
     margin: 0;
-    font-family: ${theme.fontFamily.mono};
-    line-height: 1.4;
+    font-family: ${serif.style.fontFamily};
+    line-height: 1.5;
     font-size: 16px;
     color: ${theme.colors.text};
     background-color: ${theme.colors.background};
@@ -58,8 +57,8 @@ export const global = css.global`
     text-decoration: none;
   }
   a:hover {
-    color: inherit;
-    text-decoration: underline;
+    color: ${theme.colors.link};
+    text-decoration: wavy underline 1px;
   }
 
   button {
@@ -113,7 +112,6 @@ export const global = css.global`
     display: block;
   }
 
-  // css keyframes
   @keyframes spin {
     from {
       transform: rotate(0deg);
@@ -139,7 +137,7 @@ export const global = css.global`
       color: ${theme.colors.background};
     }
     a:hover {
-      color: ${theme.colors.background};
+      color: ${theme.colors.nightLink};
     }
     button {
       background: ${theme.colors.night};
@@ -159,6 +157,10 @@ export const global = css.global`
     }
   }
   @media (max-width: 900px) {
+    body {
+      font-size: 14px;
+    }
+
     main {
       padding: 1rem;
       display: block;
