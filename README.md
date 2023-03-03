@@ -37,6 +37,7 @@ Feel free to get in touch with feedback, advice or suggestions. See [Conventiona
 
 - [mono-company/mono-icons](https://github.com/mono-company/mono-icons)
 - [brycewilner/Standard](https://github.com/brycewilner/Standard)
+- [cristianbote/goober](https://github.com/cristianbote/goober)
 
 ## License
 
