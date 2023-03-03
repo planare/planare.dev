@@ -1,6 +1,6 @@
 # planare.dev
 
-> A very barebones landing page for Planare.
+> Planare's home on the net.
 
 ## Install
 
@@ -36,7 +36,6 @@ Feel free to get in touch with feedback, advice or suggestions. See [Conventiona
 ## Acknowledgments
 
 - [mono-company/mono-icons](https://github.com/mono-company/mono-icons)
-- [brycewilner/Standard](https://github.com/brycewilner/Standard)
 - [cristianbote/goober](https://github.com/cristianbote/goober)
 
 ## License

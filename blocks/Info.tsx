@@ -23,8 +23,8 @@ export const IndexInfo = (): JSX.Element => {
         </Text>
         <Text as="p">
           We focus on shipping projects that are coherent, scalable, and meaningful to users. Our
-          team is based in New York and we work with startup founders to help them build great
-          products.
+          team is based in New York since 2022, after 6 years in Melbourne, Australia. We work with
+          startup founders to help them build great products.
         </Text>
         <Text as="p">
           In our first year, we launched a portfolio management app,{" "}
