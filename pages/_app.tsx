@@ -3,7 +3,9 @@ import { prefix } from "goober/prefixer";
 import type { AppProps } from "next/app";
 import { createElement } from "react";
 
-import { GlobalStyles, Main } from "../components/Theme";
+import { Main } from "../components/Main";
+import { GlobalStyles } from "../components/Theme";
+
 setup(createElement, prefix);
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
