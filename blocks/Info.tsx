@@ -37,7 +37,7 @@ export const IndexInfo = (): JSX.Element => {
             component library
             <Icon.External style={{ marginLeft: 4.5, marginRight: 6 }} />
           </a>
-          for Cosmo, a rapidly growing vacation rental company from Melbourne, Australia.
+          for Cosmo, a rapidly growing vacation rental startup.
         </Text>
         <Text as="p" className={visibleCollapse}>
           <Link href="/projects">See more projects</Link>
@@ -68,6 +68,11 @@ export const IndexInfo = (): JSX.Element => {
           directly for those. We simply charge a fixed retainer for ongoing maintenace and support,
           if needed.
         </Text>
+        {/*   <Text as="p">
+          We are a small team, this has the benefit of allowing us to deliver high quality work at a
+          reasonable price, but it also means we can&apos;t take on every project. We have a list of
+          recommended teams that we can refer you to if we are not a good fit.
+        </Text>*/}
         <Text as="p">We offer discounts for repeat clients and non-profits.</Text>
         <Divider bottom="small" top="largest" />
         <Text as={"small"}>Location</Text>
@@ -82,12 +87,13 @@ export const IndexInfo = (): JSX.Element => {
           <Icon.Options style={{ marginRight: 6 }} />
           <Link href="/privacy-policy">Privacy Policy</Link>
         </Text>
-        <Text>
+        <Text as="p">
           <Icon.Options style={{ marginRight: 6 }} />
           <Link href="/billing" target="_blank">
-            Update Billing
+            Billing
           </Link>
         </Text>
+
         <Divider bottom="small" top="largest" />
         <Text as={"small"}>
           <Icon.Flag style={{ marginRight: 6 }} />

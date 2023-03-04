@@ -50,7 +50,7 @@ export const Layout = ({
             {route === "index" || route === "projects" ? (
               <IndexProjects />
             ) : route === "privacy-policy" ? (
-              "privacy policy"
+              <PrivacyPolicy />
             ) : (
               "404"
             )}

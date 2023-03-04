@@ -38,6 +38,11 @@ export const GlobalStyles = createGlobalStyles`
     font-weight: 400 !important;
   }
 
+  html {
+    min-height: 100%;
+    webkit-fill-available: initial;
+  }
+
   body {
     padding: 0;
     margin: 0;
