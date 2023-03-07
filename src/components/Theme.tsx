@@ -1,4 +1,4 @@
-import { BIZ_UDPMincho } from "@next/font/google";
+import { BIZ_UDPMincho } from "next/font/google";
 import { ReactNode } from "react";
 import css from "styled-jsx/css";
 

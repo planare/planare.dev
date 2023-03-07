@@ -7,7 +7,7 @@ const nextConfig = {
     return [
       {
         source: "/billing",
-        destination: "https://pay.planare.dev/p/login/3cs8zxaGw0eQ6ZydQQ",
+        destination: "https://billing.stripe.com/p/login/3cs8zxaGw0eQ6ZydQQ",
         permanent: true,
       },
     ];

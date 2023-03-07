@@ -18,14 +18,14 @@ export default class MyDocument extends Document {
     const domain = "https://planare.dev";
     const title = "Planare";
     const description =
-      "Planare is a web development office based in Brooklyn, NY. We focus on helping startups and not-for-profits to build apps and websites that scale.";
+      "Planare is a web development office based in New York. We focus on helping startups and not-for-profits to build apps and websites that scale.";
     return (
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
 
           <meta
-            content="Planare is a web development office based in Brooklyn, NY. We focus on helping startups and not-for-profits to build apps and websites that scale."
+            content="Planare is a web development office based in New York. We focus on helping startups and not-for-profits to build apps and websites that scale."
             name="description"
           />
 

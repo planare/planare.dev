@@ -8,7 +8,7 @@ import useWeather from "../components/Weather";
 
 export default function Home(): JSX.Element {
   const [showWeather, setShowWeather] = useState(false);
-  const { results } = useWeather({ latitute: 40.6782, longitude: -73.9442 });
+  const { results } = useWeather({ latitute: 40.71954, longitude: -73.99973 });
 
   return (
     <Layout>
@@ -39,7 +39,7 @@ export default function Home(): JSX.Element {
             width={1442 * 0.075}
           />
           <button type="button" onClick={(): void => setShowWeather(!showWeather)}>
-            {results?.emoji}&nbsp; Brooklyn
+            {results?.emoji}&nbsp; New York
           </button>
         </div>
         <div style={{ marginTop: theme.spacing.small, opacity: 0.6 }}>
@@ -144,8 +144,8 @@ export default function Home(): JSX.Element {
           <Icon.Flag />
           <small style={{ marginLeft: theme.spacing.smallest, opacity: 0.6 }}>
             &copy; {new Date().getFullYear()} Planare LLC.{" "}
-            <a href="/privacy-policy">Privacy Information</a>.{" "}
-            <a href="https://planare.dev/billing">Manage your billing</a>.
+            <a href="https://planare.dev/billing">Manage your billing</a>.{" "}
+            <a href="https://new.planare.dev">Preview our new site</a>.
           </small>
         </aside>
       </section>
