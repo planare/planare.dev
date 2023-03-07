@@ -80,7 +80,7 @@ export const IndexInfo = (): JSX.Element => {
           We work out of a space in SoHo, New York City, at the junction of Little Italy and
           Chinatown. We would love to shoot the breeze. If you are in the area, let us know!
         </Text>
-        <Text as="p">148 Lafeyette Street, 4th Floor, New York, NY 10013</Text>
+        <Text as="p">148 Lafayette Street, 4th Floor, New York, NY 10013</Text>
         <Divider bottom="small" top="largest" />
         <Text as={"small"}>Resources</Text>
         <Text as="p" top="small">

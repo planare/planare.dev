@@ -1,16 +1,17 @@
 import Head from "next/head";
 
-import { Card } from "../components/Card";
-import { Pane } from "../components/Classes";
-import { Column } from "../components/Column";
-import { Div } from "../components/Div";
-import { Row } from "../components/Row";
-import { visibleCollapse, hiddenCollapse } from "../components/Utils";
+import { IndexInfo } from "../blocks/Info";
+import { Logo } from "../blocks/Logo";
+import { PrivacyPolicy } from "../blocks/PrivacyPolicy";
+import { IndexProjects } from "../blocks/Projects";
 
-import { IndexInfo } from "./Info";
-import { Logo } from "./Logo";
-import { PrivacyPolicy } from "./PrivacyPolicy";
-import { IndexProjects } from "./Projects";
+import { Card } from "./Card";
+import { Pane } from "./Classes";
+import { Column } from "./Column";
+import { Div } from "./Div";
+import { Row } from "./Row";
+import { theme } from "./Theme";
+import { visibleCollapse, hiddenCollapse } from "./Utils";
 
 export const Layout = ({
   route,
@@ -23,6 +24,24 @@ export const Layout = ({
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <title>Planare</title>
       </Head>
+      <Div
+        style={{
+          position: "fixed",
+          zIndex: 1,
+          width: "20rem",
+          margin: "0 auto",
+          left: 0,
+          right: 0,
+          textAlign: "center",
+          background: theme.colors.background,
+          color: theme.colors.text,
+          border: `1px dotted ${theme.colors.border}`,
+          padding: "0.5rem",
+          marginTop: `-0.75rem`,
+          boxShadow: "0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.05)",
+        }}>
+        ⊛ WORK IN PROGRESS ⊛
+      </Div>
       <Row>
         <Column align="center" width="50%">
           <Card className={Pane}>
