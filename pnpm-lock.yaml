@@ -5,11 +5,11 @@ specifiers:
   '@types/react': ^18.0.28
   '@vercel/analytics': ^0.1.11
   eslint: ^8.35.0
-  eslint-config-dolmios: ^1.4.1
+  eslint-config-dolmios: ^1.4.2
   goober: ^2.1.12
   goober-autoprefixer: ^1.2.3
   next: ^13.2.3
-  next-sitemap: ^4.0.4
+  next-sitemap: ^4.0.5
   prettier: ^2.8.4
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -29,8 +29,8 @@ devDependencies:
   '@types/node': 18.14.6
   '@types/react': 18.0.28
   eslint: 8.35.0
-  eslint-config-dolmios: 1.4.1
-  next-sitemap: 4.0.4_next@13.2.3
+  eslint-config-dolmios: 1.4.2
+  next-sitemap: 4.0.5_next@13.2.3
   prettier: 2.8.4
   typescript: 4.9.5
 
@@ -850,8 +850,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-dolmios/1.4.1:
-    resolution: {integrity: sha512-sNUhQLoIFK272rylcQ52Sb/MvYbdqgISZ3DDdbNlGyTR374N1obnyXw27lTonRyOXiqZGvDtpxmGCOwMKMTHOg==}
+  /eslint-config-dolmios/1.4.2:
+    resolution: {integrity: sha512-xUEvkf6jupHdiZxwNLJ6tzoI1qrRMlZnTFDNYF/saex102EV6WidumyZd3gxfMj8c5DWP7xlmPTv+CEwGGCLlg==}
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.54.1_mlk7dnz565t663n4razh6a6v6i
       '@typescript-eslint/parser': 5.54.1_ycpbpc6yetojsgtrx3mwntkhsu
@@ -1814,8 +1814,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /next-sitemap/4.0.4_next@13.2.3:
-    resolution: {integrity: sha512-4/bUDeWNx03fc8ac+5wA55H1Zn3X3c1qj5iq3Mk5eidzxnBzIuUt4NJ+1TpB0n1m7HUgEtE+kaUGShFK0McZVg==}
+  /next-sitemap/4.0.5_next@13.2.3:
+    resolution: {integrity: sha512-kIABX4n8wJqY2sttRjivBF2r1MgQ1pg12y87qGT+5meippq0ivxaNSRldMDOj8pIGhXW6uFAsCxyH/JftqkwWQ==}
     engines: {node: '>=14.18'}
     hasBin: true
     peerDependencies:
