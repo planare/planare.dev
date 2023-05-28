@@ -2,21 +2,20 @@ import { BIZ_UDPMincho } from "next/font/google";
 import { ReactNode } from "react";
 import css from "styled-jsx/css";
 
+import { Icon } from "./icons";
+
 const serif = BIZ_UDPMincho({
   fallback: ["monospace"],
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "700"],
 });
 
 export const theme = {
   colors: {
-    background: "rgb(244, 247, 255)",
+    background: "rgb(0,0,0)",
     border: "rgba(0, 0, 90, 0.33)",
-    night: "rgb(0,0,30)",
-    nightBorder: "rgba(244, 247, 255, 0.33)",
-    text: "rgb(0,0,90)",
-    link: "rgb(116, 66, 71)",
-    nightLink: "rgb(217, 167, 172)",
+    text: "rgb(255,255,255)",
+    link: "rgb(200,200,200)",
   },
   spacing: {
     large: "4rem",
@@ -30,7 +29,6 @@ export const theme = {
 export const global = css.global`
   * {
     box-sizing: border-box;
-    font-weight: 400 !important;
   }
 
   body {
@@ -38,45 +36,24 @@ export const global = css.global`
     margin: 0;
     font-family: ${serif.style.fontFamily};
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 17px;
     color: ${theme.colors.text};
     background-color: ${theme.colors.background};
-  }
 
-  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
-    body {
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-    }
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
   }
 
   a,
   a:visited,
   a:active {
     color: inherit;
+    transition: all 0.2s ease;
     text-decoration: none;
   }
   a:hover {
     color: ${theme.colors.link};
-    text-decoration: wavy underline 1px;
-  }
-
-  button {
-    transition: all 0.42s ease-in-out;
-    border: 0.1rem solid ${theme.colors.border};
-    background: ${theme.colors.text};
-    color: ${theme.colors.background};
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-    padding: calc(${theme.spacing.smallest} / 3) calc(${theme.spacing.smallest} / 1.5);
-    border-radius: ${theme.spacing.smallest};
-  }
-
-  button:hover {
-    background: ${theme.colors.background};
-    color: ${theme.colors.text};
+    text-decoration: wavy underline ${theme.colors.link} 1px;
   }
 
   img {
@@ -87,75 +64,34 @@ export const global = css.global`
   main {
     padding: 2rem;
     min-height: 100vh;
+    max-width: 50rem;
+    margin: 0 auto;
   }
 
-  section {
-    max-width: 70rem;
-    margin: 0 auto;
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
   }
 
   img {
     object-fit: fit !important;
     object-position: center;
   }
-  svg {
-    vertical-align: middle;
-    height: 1.2rem;
-    width: 1.2rem;
-    object-fit: cover;
-    align-self: center;
-  }
-  .logo-dark {
-    display: none;
-  }
-  .logo {
-    display: block;
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: ${theme.spacing.small};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.8;
   }
 
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  .spin {
-    animation: spin 7s linear infinite;
-  }
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: ${theme.colors.night};
-      color: ${theme.colors.background};
-    }
-    section {
-      border-color: ${theme.colors.nightBorder};
-    }
-    a,
-    a:visited,
-    a:active {
-      color: ${theme.colors.background};
-    }
-    a:hover {
-      color: ${theme.colors.nightLink};
-    }
-    button {
-      background: ${theme.colors.night};
-      color: ${theme.colors.background};
-      border-color: ${theme.colors.nightBorder};
-    }
-    button:hover {
-      background: ${theme.colors.background};
-      color: ${theme.colors.night};
-    }
-
-    .logo-dark {
-      display: block;
-    }
-    .logo {
-      display: none;
-    }
-  }
   @media (max-width: 900px) {
     body {
       font-size: 14px;
@@ -165,23 +101,25 @@ export const global = css.global`
       padding: 1rem;
       display: block;
     }
-    section {
-      width: 100%;
-    }
   }
 `;
 
 export default function Provider({ children }: { children: ReactNode }): JSX.Element {
   return (
-    <div>
+    <main>
       {children}
+      <footer>
+        <small>
+          <Icon.Flag />
+          &copy; {new Date().getFullYear()} Planare LLC.{" "}
+        </small>
+        <small>
+          <a href="https://planare.dev/billing">Manage your billing.</a>
+        </small>
+      </footer>
       <style global jsx>
         {global}
       </style>
-    </div>
+    </main>
   );
-}
-
-export function Layout({ children }: { children: ReactNode }): JSX.Element {
-  return <main>{children}</main>;
 }

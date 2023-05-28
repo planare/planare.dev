@@ -7,24 +7,24 @@
     "url": "https://github.com/planare/planare.dev/issues"
   },
   "dependencies": {
-    "@vercel/analytics": "^0.1.11",
-    "next": "^13.2.3",
+    "@vercel/analytics": "^1.0.1",
+    "next": "^13.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-jsx": "^5.1.2",
-    "swr": "^2.1.0",
+    "swr": "^2.1.5",
     "typescript": "^4.9.5",
-    "vercel": "^28.16.15"
+    "vercel": "^30.0.0"
   },
   "devDependencies": {
-    "@next/env": "^13.2.3",
-    "@types/node": "^18.14.6",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "eslint": "^8.35.0",
-    "eslint-config-dolmios": "^1.4.1",
-    "next-sitemap": "^3.1.55",
-    "prettier": "^2.8.4"
+    "@next/env": "^13.4.4",
+    "@types/node": "^20.2.5",
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
+    "eslint": "^8.41.0",
+    "eslint-config-dolmios": "^1.5.1",
+    "next-sitemap": "^4.1.3",
+    "prettier": "^2.8.8"
   },
   "homepage": "https://planare.dev",
   "keywords": [
@@ -46,7 +46,7 @@
     "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && next dev -p 420",
     "env:link": "vercel link",
     "env:local": "vercel env pull .env.local",
-    "lint": "eslint . --ext js,jsx,ts,tsx",
+    "lint": "eslint . --ext js,jsx,ts,tsx --fix",
     "prettier": "prettier --write '**/*.{js,jsx,tsx}' '!node_modules/**' '!.git/**' '!.next/**'",
     "sitemap": "next-sitemap",
     "tidy": "pnpm lint && pnpm prettier"

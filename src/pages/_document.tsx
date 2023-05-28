@@ -11,6 +11,7 @@ import React, { ReactElement } from "react";
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx);
+
     return { ...initialProps };
   }
 
@@ -19,6 +20,7 @@ export default class MyDocument extends Document {
     const title = "Planare";
     const description =
       "Planare is a web development office based in New York. We focus on helping startups and not-for-profits to build apps and websites that scale.";
+
     return (
       <Html lang="en">
         <Head>
