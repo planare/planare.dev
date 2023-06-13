@@ -1,13 +1,11 @@
-import { BIZ_UDPMincho } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import { ReactNode } from "react";
 import css from "styled-jsx/css";
 
 import { Icon } from "./icons";
 
-const serif = BIZ_UDPMincho({
-  fallback: ["monospace"],
-  subsets: ["latin"],
-  weight: ["400", "700"],
+const font = Space_Grotesk({
+  subsets: ["latin-ext"],
 });
 
 export const theme = {
@@ -34,27 +32,26 @@ export const global = css.global`
   body {
     padding: 0;
     margin: 0;
-    font-family: ${serif.style.fontFamily};
-    line-height: 1.5;
-    font-size: 17px;
+    font-family: ${font.style.fontFamily};
+    line-height: 1.4;
+    font-size: 16px;
     color: ${theme.colors.text};
     background-color: ${theme.colors.background};
-
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
   }
 
-  a,
-  a:visited,
-  a:active {
-    color: inherit;
-    transition: all 0.2s ease;
-    text-decoration: none;
-  }
-  a:hover {
-    color: ${theme.colors.link};
-    text-decoration: wavy underline ${theme.colors.link} 1px;
-  }
+a,
+a:visited,
+a:active {
+  color: inherit;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+a:hover {
+  font-weight: 600;
+  letter-spacing: -0.0025rem;
+}
 
   img {
     max-width: 100%;
@@ -101,6 +98,12 @@ export const global = css.global`
       padding: 1rem;
       display: block;
     }
+    
+    footer {
+      position: static;
+      padding: 0;
+      margin-top: ${theme.spacing.large};
+      display: block;
   }
 `;
 
