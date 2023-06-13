@@ -68,6 +68,7 @@ export default function Home(): JSX.Element {
       </p>
       <p>
         <a
+          className="cta"
           href="mailto:mail@planare.dev"
           rel="noreferrer"
           style={{ marginRight: theme.spacing.small }}
@@ -75,13 +76,14 @@ export default function Home(): JSX.Element {
           mail@planare.dev
         </a>
         <a
+          className="cta"
           href="tel:+19299997420"
           rel="noreferrer"
           style={{ marginRight: theme.spacing.small }}
           target="_blank">
           (929) 999-7420
         </a>
-        <a href="https://github.com/planare" rel="noreferrer" target="_blank">
+        <a className="cta" href="https://github.com/planare" rel="noreferrer" target="_blank">
           github.com&#47;planare
         </a>
       </p>

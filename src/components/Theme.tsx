@@ -98,6 +98,10 @@ a:hover {
       padding: 1rem;
       display: block;
     }
+
+    a.cta {
+      display: block;
+    }
     
     footer {
       position: static;
