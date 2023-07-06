@@ -35,10 +35,9 @@ export default function Home(): JSX.Element {
         </span>
       </p>
       <p>
-        We deliver coherent, scalable, and user-centric apps and websites, with an emphasis on
-        frontend and product development. By partnering with startups, agencies, and small
-        businesses, we assist in launching new projects, augmenting team capacities, and bolstering
-        online presence.
+        We deliver coherent, scalable, and user-centric apps and websites, with an emphasis on frontend and product development.
+        By partnering with startups, agencies, and small businesses, we assist in launching new projects, augmenting team
+        capacities, and bolstering online presence.
       </p>{" "}
       <p>
         We recently developed a portfolio management app,{" "}
@@ -59,13 +58,7 @@ export default function Home(): JSX.Element {
           })}
         </span>
       </p>
-      <p>
-        We work out of a space in SoHo, at the junction of Little Italy and Chinatown. We would love
-        to shoot the breeze. If you are in the area, let us know!
-      </p>
-      <p style={{ marginTop: theme.spacing.large }}>
-        148 Lafayette Street, 4th Floor, New York, NY 10013
-      </p>
+      <p style={{ marginTop: theme.spacing.large }}>148 Lafayette Street, 4th Floor, New York, NY 10013</p>
       <p>
         <a
           className="cta"
@@ -75,6 +68,7 @@ export default function Home(): JSX.Element {
           target="_blank">
           mail@planare.dev
         </a>
+        {/*
         <a
           className="cta"
           href="tel:+19299997420"
@@ -82,7 +76,7 @@ export default function Home(): JSX.Element {
           style={{ marginRight: theme.spacing.small }}
           target="_blank">
           (929) 999-7420
-        </a>
+        </a>*/}
         <a className="cta" href="https://github.com/planare" rel="noreferrer" target="_blank">
           github.com&#47;planare
         </a>

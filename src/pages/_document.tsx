@@ -1,11 +1,4 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentInitialProps,
-  DocumentContext,
-} from "next/document";
+import Document, { Html, Head, Main, NextScript, DocumentInitialProps, DocumentContext } from "next/document";
 import React, { ReactElement } from "react";
 
 export default class MyDocument extends Document {
