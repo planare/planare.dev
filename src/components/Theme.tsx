@@ -34,7 +34,7 @@ export const global = css.global`
     margin: 0;
     font-family: ${font.style.fontFamily};
     line-height: 1.4;
-    font-size: 16px;
+    font-size: 17px;
     color: ${theme.colors.text};
     background-color: ${theme.colors.background};
     -moz-osx-font-smoothing: grayscale;
@@ -91,7 +91,7 @@ a:hover {
 
   @media (max-width: 900px) {
     body {
-      font-size: 14px;
+      font-size: 14.5px;
     }
 
     main {
