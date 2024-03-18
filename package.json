@@ -7,24 +7,25 @@
     "url": "https://github.com/planare/planare.dev/issues"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.1.1",
-    "next": "^14.0.2",
+    "@vercel/analytics": "^1.2.2",
+    "next": "^14.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sharp": "^0.33.2",
     "styled-jsx": "^5.1.2",
-    "swr": "^2.2.4",
-    "typescript": "^5.2.2",
-    "vercel": "^32.5.4"
+    "swr": "^2.2.5",
+    "typescript": "^5.4.2",
+    "vercel": "^33.6.1"
   },
   "devDependencies": {
-    "@next/env": "^14.0.2",
-    "@types/node": "^20.9.0",
-    "@types/react": "^18.2.37",
-    "@types/react-dom": "^18.2.15",
-    "eslint": "^8.53.0",
-    "eslint-config-dolmios": "^1.8.6",
+    "@next/env": "^14.1.3",
+    "@types/node": "^20.11.28",
+    "@types/react": "^18.2.67",
+    "@types/react-dom": "^18.2.22",
+    "eslint": "^8.57.0",
+    "eslint-config-dolmios": "^1.9.0",
     "next-sitemap": "^4.2.3",
-    "prettier": "^3.1.0"
+    "prettier": "^3.2.5"
   },
   "homepage": "https://planare.dev",
   "keywords": [

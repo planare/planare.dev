@@ -35,9 +35,9 @@ export default function Home(): JSX.Element {
         </span>
       </p>
       <p>
-        We deliver coherent, scalable, and user-centric apps and websites, with an emphasis on frontend and product development.
-        By partnering with startups, agencies, and small businesses, we assist in launching new projects, augmenting team
-        capacities, and bolstering online presence.
+        We deliver coherent, scalable, and user-centric apps and websites, with an emphasis on frontend and product
+        development. By partnering with startups, agencies, and small businesses, we assist in launching new projects,
+        augmenting team capacities, and bolstering online presence.
       </p>{" "}
       <p>
         We recently developed a portfolio management app,{" "}
@@ -58,8 +58,7 @@ export default function Home(): JSX.Element {
           })}
         </span>
       </p>
-      <p style={{ marginTop: theme.spacing.large }}>148 Lafayette Street, 4th Floor, New York, NY 10013</p>
-      <p>
+      <p style={{ marginTop: theme.spacing.large }}>
         <a
           className="cta"
           href="mailto:mail@planare.dev"
