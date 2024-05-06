@@ -19,25 +19,14 @@ export default function Home(): JSX.Element {
         style={{ marginTop: theme.spacing.normal }}
         width={1442 * 0.075}
       />
-      <p style={{ marginTop: theme.spacing.large }}>
-        Planare is the office of{" "}
-        <a href="https://twitter.com/planaredev" rel="noreferrer" target="_blank">
-          Jackson Dolman
-        </a>
-        , a developer based in New York City.&nbsp;&nbsp;
-        <span style={{ opacity: 0.42 }}>
-          {now.toLocaleString("en-US", {
-            timeZone: "America/New_York",
-            hour: "numeric",
-            minute: "numeric",
-            hour12: true,
-          })}
-        </span>
-      </p>
+      <h1 style={{ marginTop: "5rem" }}>
+        Check back soon, we are working on a new website. We are still available for work.
+      </h1>
       <p>
-        We deliver coherent, scalable, and user-centric apps and websites, with an emphasis on frontend and product
-        development. By partnering with startups, agencies, and small businesses, we assist in launching new projects,
-        augmenting team capacities, and bolstering online presence.
+        We deliver coherent, scalable, and user-centric apps and websites, with an emphasis on
+        frontend and product development. By partnering with startups, agencies, and small
+        businesses, we assist in launching new projects, augmenting team capacities, and bolstering
+        online presence.
       </p>{" "}
       <p>
         We recently developed a portfolio management app,{" "}
@@ -58,7 +47,7 @@ export default function Home(): JSX.Element {
           })}
         </span>
       </p>
-      <p style={{ marginTop: theme.spacing.large }}>
+      <p style={{ marginTop: theme.spacing.large, marginBottom: 0 }}>
         <a
           className="cta"
           href="mailto:mail@planare.dev"
@@ -80,6 +69,7 @@ export default function Home(): JSX.Element {
           github.com&#47;planare
         </a>
       </p>
+      <small style={{ opacity: 0.64 }}>651 N Broad Street, Middletown DE 19709, USA</small>
     </div>
   );
 }
