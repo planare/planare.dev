@@ -1,9 +1,14 @@
 import Head from "next/head";
-import Image from "next/image";
 
 import { theme } from "../components/Theme";
 
 const now = new Date();
+const nowString = now.toLocaleString("en-AU", {
+  timeZone: "Australia/Melbourne",
+  hour: "numeric",
+  minute: "numeric",
+  hour12: true,
+});
 
 export default function Home(): JSX.Element {
   return (
@@ -11,65 +16,82 @@ export default function Home(): JSX.Element {
       <Head>
         <title>Planare</title>
       </Head>
-      <Image
-        alt={""}
-        height={544 * 0.075}
-        sizes="(max-width: 600px) 100vw, 600px"
-        src="/inline-inverse.png"
-        style={{ marginTop: theme.spacing.normal }}
-        width={1442 * 0.075}
-      />
-      <h1 style={{ marginTop: "5rem" }}>
-        Check back soon, we are working on a new website. We are still available for work.
-      </h1>
+      <div
+        style={{
+          marginBottom: theme.spacing.large,
+        }}>
+        <small className="warning">
+          Check back soon. We are currently updating our website to reflect our latest projects.
+        </small>
+      </div>
+      <h1>You have big ideas. We have the development expertise to bring them to life.</h1>
       <p>
-        We deliver coherent, scalable, and user-centric apps and websites, with an emphasis on
-        frontend and product development. By partnering with startups, agencies, and small
-        businesses, we assist in launching new projects, augmenting team capacities, and bolstering
-        online presence.
+        We empower startups and small businesses to thrive online through exceptional front-end web
+        development. We craft visually stunning, user-friendly websites and web applications
+        tailored to your unique brand and goals.
       </p>{" "}
-      <p>
-        We recently developed a portfolio management app,{" "}
-        <a href="https://cosmogroup.io" rel="noreferrer" target="_blank">
-          website
-        </a>{" "}
-        and open-source{" "}
-        <a href="https://github.com/cosmoau/ui" rel="noreferrer" target="_blank">
-          component library
-        </a>{" "}
-        for Cosmo, a fast-growing vacation rental company based in Melbourne.&nbsp;&nbsp;
-        <span style={{ opacity: 0.42 }}>
-          {now.toLocaleString("en-AU", {
-            timeZone: "Australia/Melbourne",
-            hour: "numeric",
-            minute: "numeric",
-            hour12: true,
-          })}
-        </span>
-      </p>
-      <p style={{ marginTop: theme.spacing.large, marginBottom: 0 }}>
-        <a
-          className="cta"
-          href="mailto:mail@planare.dev"
-          rel="noreferrer"
-          style={{ marginRight: theme.spacing.small }}
-          target="_blank">
-          mail@planare.dev
-        </a>
-        {/*
-        <a
-          className="cta"
-          href="tel:+19299997420"
-          rel="noreferrer"
-          style={{ marginRight: theme.spacing.small }}
-          target="_blank">
-          (929) 999-7420
-        </a>*/}
-        <a className="cta" href="https://github.com/planare" rel="noreferrer" target="_blank">
-          github.com&#47;planare
-        </a>
-      </p>
-      <small style={{ opacity: 0.64 }}>651 N Broad Street, Middletown DE 19709, USA</small>
+      <div
+        style={{
+          marginTop: theme.spacing.large,
+        }}>
+        <article
+          style={{
+            borderBottomLeftRadius: 0,
+            borderBottomRightRadius: 0,
+          }}>
+          <h3>☞ Web & Product Development</h3>
+          <p>
+            We build the face of your digital presence, ensuring intuitive user experiences,
+            responsive designs, and seamless functionality across all devices.{" "}
+          </p>
+          <h3>☞ Consulting & Strategy</h3>
+          <p>
+            We provide expert guidance on web technologies, design trends, and digital marketing
+            strategies to help you make informed decisions and drive growth.{" "}
+          </p>
+          <h3>☞ Project Management</h3>
+          <p>
+            We guide your project from inception to launch, ensuring seamless communication,
+            efficient workflows, and timely delivery.
+          </p>
+          <h3>☞ Maintenance & Support</h3>
+          <p>
+            We handle the technical aspects of your website, including hosting, security updates,
+            content management, and performance optimization.
+          </p>
+          <hr style={{ marginTop: theme.spacing.normal }} />
+          <small>
+            <strong>Pricing:</strong>
+            Hourly development is billed at $125/hour. Managed hosting starts at $40/month, and
+            domain names start at $40/year. Project packages are customized to your needs and
+            budget, providing a clear, upfront project cost.
+          </small>
+        </article>
+        <article
+          className="alternative"
+          style={{
+            borderTopLeftRadius: 0,
+            borderTopRightRadius: 0,
+          }}>
+          <h5>
+            We recently developed a portfolio management app,{" "}
+            <a href="https://cosmogroup.io" rel="noreferrer" target="_blank">
+              website
+            </a>{" "}
+            and open-source{" "}
+            <a href="https://github.com/cosmoau/ui" rel="noreferrer" target="_blank">
+              component library
+            </a>{" "}
+            for Cosmo, a fast-growing vacation rental company based in Melbourne.&nbsp;&nbsp;
+            <span style={{ opacity: 0.42 }}>{nowString}</span>
+          </h5>
+        </article>
+      </div>
+      <div style={{ marginTop: theme.spacing.largest, textAlign: "center" }}>
+        <small style={{ opacity: 0.64 }}>
+          651 N Broad Street, Middletown DE 19709, USA. Serving clients worldwide.
+        </small>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import useSWR from "swr";
 
 import { theme } from "../components/Theme";
@@ -25,19 +24,16 @@ export default function Custom404(): JSX.Element {
       <Head>
         <title>404: Planare</title>
       </Head>
-      <p style={{ marginTop: theme.spacing.large }}>This page could not be found.</p>
-      <h1>
-        <Link href="/">🏠</Link>
-      </h1>
+
       {data && (
-        <p
+        <h1
           style={{
-            opacity: 0.42,
             marginTop: theme.spacing.largest,
           }}>
-          {data.content} — {data.author} (Added {new Date(data.dateAdded).toLocaleDateString()})
-        </p>
+          {data.content} — {data.author}
+        </h1>
       )}
+      <p style={{ marginTop: theme.spacing.large }}>This page could not be found.</p>
     </div>
   );
 }
