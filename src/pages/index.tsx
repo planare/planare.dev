@@ -1,6 +1,8 @@
 import Head from "next/head";
+import Balancer from "react-wrap-balancer";
 
-import { theme } from "../components/Theme";
+import Page from "../components/Page";
+import { theme } from "../components/styles";
 
 const now = new Date();
 const nowString = now.toLocaleString("en-AU", {
@@ -12,27 +14,39 @@ const nowString = now.toLocaleString("en-AU", {
 
 export default function Home(): JSX.Element {
   return (
-    <div>
+    <Page>
       <Head>
         <title>Planare</title>
       </Head>
       <div
         style={{
-          marginBottom: theme.spacing.large,
+          textAlign: "center",
         }}>
-        <small className="warning">
-          Check back soon. We are currently updating our website to reflect our latest projects.
-        </small>
+        <div
+          style={{
+            marginBottom: theme.spacing.largest,
+          }}>
+          <small className="warning">
+            Check back soon. We are currently updating our website to reflect our latest projects.
+          </small>
+        </div>
+        <h1>
+          {" "}
+          <Balancer>
+            You have big ideas. We have the development expertise to bring them to life.
+          </Balancer>
+        </h1>
+        <p>
+          <Balancer>
+            We empower startups and small businesses to thrive online through exceptional front-end
+            web development. We craft visually stunning, user-friendly websites and web applications
+            tailored to your unique brand and goals.
+          </Balancer>
+        </p>{" "}
       </div>
-      <h1>You have big ideas. We have the development expertise to bring them to life.</h1>
-      <p>
-        We empower startups and small businesses to thrive online through exceptional front-end web
-        development. We craft visually stunning, user-friendly websites and web applications
-        tailored to your unique brand and goals.
-      </p>{" "}
       <div
         style={{
-          marginTop: theme.spacing.large,
+          marginTop: theme.spacing.largest,
         }}>
         <article
           style={{
@@ -88,10 +102,8 @@ export default function Home(): JSX.Element {
         </article>
       </div>
       <div style={{ marginTop: theme.spacing.largest, textAlign: "center" }}>
-        <small style={{ opacity: 0.64 }}>
-          651 N Broad Street, Middletown DE 19709, USA. Serving clients worldwide.
-        </small>
+        <small style={{ opacity: 0.64 }}>Serving clients worldwide.</small>
       </div>
-    </div>
+    </Page>
   );
 }

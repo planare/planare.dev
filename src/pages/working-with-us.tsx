@@ -1,19 +1,19 @@
 import Head from "next/head";
 
-import { theme } from "../components/Theme";
+import Page from "../components/Page";
 
 export default function FulfillmentPolicy(): JSX.Element {
   return (
-    <div>
+    <Page>
       <Head>
-        <title>Fulfillment Policy: Planare</title>
+        <title>Working with Planare</title>
       </Head>
 
-      <h1>Fulfillment Policy</h1>
+      <h1>Working with Planare</h1>
       <p>
         At Planare, we are committed to delivering high-quality web development solutions tailored
-        to your specific needs and budget. Our fulfillment process ensures clarity, transparency,
-        and timely project completion.
+        to your specific needs and budget. Our process ensures clarity, transparency, and timely
+        project completion.
       </p>
       <h3>1. Project Scoping and Agreement:</h3>
       <ul>
@@ -79,21 +79,12 @@ export default function FulfillmentPolicy(): JSX.Element {
           ensure your project&apos;s success.
         </li>
         <li>
-          If you have any concerns or questions throughout the fulfillment process, please
-          don&apos;t hesitate to contact us.
+          If you have any concerns or questions throughout the process, please don&apos;t hesitate
+          to contact us.
         </li>
       </ul>
-      <p>
-        By engaging our services, you acknowledge and agree to the terms outlined in this
-        fulfillment policy.
-      </p>
 
-      <p
-        style={{
-          marginTop: theme.spacing.large,
-        }}>
-        Effective Date: <strong>May 1, 2024</strong>
-      </p>
-    </div>
+      <p>Planare LLC, 651 N Broad Street, Middletown DE 19709, USA.</p>
+    </Page>
   );
 }

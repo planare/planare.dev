@@ -1,11 +1,12 @@
 import Head from "next/head";
 
+import Page from "../components/Page";
+import { theme } from "../components/styles";
 import { TallyWidget } from "../components/Tally";
-import { theme } from "../components/Theme";
 
 export default function NewProjects(): JSX.Element {
   return (
-    <div>
+    <Page>
       <Head>
         <title>New Projects: Planare</title>
         <script async src="https://tally.so/widgets/embed.js" />
@@ -25,6 +26,6 @@ export default function NewProjects(): JSX.Element {
           <TallyWidget tallyCode="3NAvMj" />
         </article>
       </div>
-    </div>
+    </Page>
   );
 }

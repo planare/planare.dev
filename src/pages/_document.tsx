@@ -8,6 +8,8 @@ import Document, {
 } from "next/document";
 import React, { ReactElement } from "react";
 
+import { theme } from "../components/styles";
+
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx);
@@ -16,6 +18,24 @@ export default class MyDocument extends Document {
   }
 
   render(): ReactElement {
+    const themeStyles = `
+      :root {
+        --color-background: ${theme.colors.background};
+        --color-text: ${theme.colors.text};
+        --color-link: ${theme.colors.link};
+        --color-accent: ${theme.colors.accent};
+        --color-warning: ${theme.colors.warning};
+        
+        --spacing-large: ${theme.spacing.large};
+        --spacing-largest: ${theme.spacing.largest};
+        --spacing-normal: ${theme.spacing.normal};
+        --spacing-small: ${theme.spacing.small};
+        --spacing-smallest: ${theme.spacing.smallest};
+        
+        --font: ${theme.font};
+      }
+    `;
+
     const domain = "https://planare.dev";
     const title = "Planare";
     const description =
@@ -48,9 +68,11 @@ export default class MyDocument extends Document {
           <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
           <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
           <link href="/site.webmanifest" rel="manifest" />
-          <link color="#00005a" href="/safari-pinned-tab.svg" rel="mask-icon" />
-          <meta content="#2b5797" name="msapplication-TileColor" />
-          <meta content="#f4f7ff" name="theme-color" />
+          <link color="#d7d2fe" href="/safari-pinned-tab.svg" rel="mask-icon" />
+          <meta content="#d7d2fe" name="msapplication-TileColor" />
+          <meta content="#d7d2fe" name="theme-color" />
+
+          <style dangerouslySetInnerHTML={{ __html: themeStyles }} />
         </Head>
         <body>
           <Main />

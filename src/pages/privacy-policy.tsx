@@ -1,10 +1,11 @@
 import Head from "next/head";
 
-import { theme } from "../components/Theme";
+import Page from "../components/Page";
+import { theme } from "../components/styles";
 
 export default function PrivacyPolicy(): JSX.Element {
   return (
-    <div>
+    <Page>
       <Head>
         <title>Privacy Policy: Planare</title>
       </Head>
@@ -54,6 +55,7 @@ export default function PrivacyPolicy(): JSX.Element {
         }}>
         Effective Date: <strong>May 1, 2024</strong>
       </p>
-    </div>
+      <p>Planare LLC, 651 N Broad Street, Middletown DE 19709, USA.</p>
+    </Page>
   );
 }
