@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { ReactNode } from "react";
 
 import logo from "../../public/logo-2024.png";
@@ -8,6 +9,9 @@ import { Icon } from "./icons";
 import { font } from "./styles";
 
 export default function Page({ children }: { children: ReactNode }): JSX.Element {
+  const router = useRouter();
+  const hideCTA = router.pathname === "/new-projects";
+
   return (
     <div className={font.className}>
       <header>
@@ -27,7 +31,7 @@ export default function Page({ children }: { children: ReactNode }): JSX.Element
           <a href="https://planare.dev/billing">Sign In</a>
 
           <Link href="/new-projects">
-            <button className="cta" type="button">
+            <button className={hideCTA ? "hidden" : "cta"} type="button">
               ✹ New Project
             </button>
           </Link>

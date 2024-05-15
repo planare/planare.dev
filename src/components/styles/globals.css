@@ -172,6 +172,9 @@ p:last-child {
     display: inline-block;
 }
 
+.hidden {
+    display: none;
+}
 .logo {
      background: var(--color-background);
      border: 2px solid var(--color-background);
