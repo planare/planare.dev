@@ -27,7 +27,8 @@ export default function Home(): JSX.Element {
             marginBottom: theme.spacing.largest,
           }}>
           <small className="warning">
-            Check back soon. We are currently updating our website to reflect our latest projects.
+            ℹ Check back soon. We are currently updating our website to reflect our latest
+            projects.
           </small>
         </div>
         <h1>

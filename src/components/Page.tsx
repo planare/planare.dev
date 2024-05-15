@@ -21,14 +21,15 @@ export default function Page({ children }: { children: ReactNode }): JSX.Element
           <Link href="/">Home</Link>
 
           <Link href="/contact">Contact</Link>
-          <a className="sign-in" href="https://planare.dev/billing">
-            Sign In
-          </a>
           <a href="https://github.com/planare" rel="noreferrer" target="_blank">
-            GitHub
+            Projects
           </a>
+          <a href="https://planare.dev/billing">Sign In</a>
+
           <Link href="/new-projects">
-            <button type="button">New Project</button>
+            <button className="cta" type="button">
+              ✹ New Project
+            </button>
           </Link>
         </nav>
       </header>
