@@ -77,7 +77,7 @@ export default function Home(): JSX.Element {
           <hr style={{ marginTop: theme.spacing.normal }} />
           <small>
             <strong>Pricing:</strong>
-            Hourly development is billed at $125/hour. Managed hosting starts at $40/month, and
+            Hourly development is billed at $85/hour. Managed hosting starts at $40/month, and
             domain names start at $40/year. Project packages are customized to your needs and
             budget, providing a clear, upfront project cost.
           </small>

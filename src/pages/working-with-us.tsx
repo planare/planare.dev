@@ -51,7 +51,7 @@ export default function FulfillmentPolicy(): JSX.Element {
         </li>
         <li>
           We typically offer several revisions after project delivery to ensure your satisfaction.
-          Additional revisions will be billed at our hourly rate of $125 USD/hour.
+          Additional revisions will be billed at our hourly rate of $85 USD/hour.
         </li>
         <li>
           We can tailor a support package to your specific needs, whether it&apos;s routine
@@ -84,7 +84,7 @@ export default function FulfillmentPolicy(): JSX.Element {
           Project packages are billed according to the agreed-upon project cost, with potential for
           installment payments based on milestones.
         </li>
-        <li>Hourly services are billed at $125 USD/hour.</li>
+        <li>Hourly services are billed at $85 USD/hour.</li>
         <li>
           Managed hosting and domain name fees are billed monthly or annually, as agreed upon in the
           project scope.

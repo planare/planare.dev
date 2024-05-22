@@ -72,7 +72,7 @@ export default class MyDocument extends Document {
           <link color="#d7d2fe" href="/safari-pinned-tab.svg" rel="mask-icon" />
           <meta content="#d7d2fe" name="msapplication-TileColor" />
           <meta content="#d7d2fe" name="theme-color" />
-          
+
           <style dangerouslySetInnerHTML={{ __html: themeStyles }} />
         </Head>
         <body>
