@@ -90,10 +90,24 @@ button {
     font-weight: 500;
 }
 
+
+
 button:hover {
     background: var(--color-background);
     color: var(--color-text);
     font-weight: 600;
+}
+
+button.minimal {
+    background: var(--color-background);
+    color: var(--color-text);
+
+    padding: 0.25rem 0.5rem;
+}
+
+button.minimal:hover {
+    background: var(--color-text);
+    color: var(--color-background);
 }
 
 svg {
@@ -112,9 +126,7 @@ footer {
     align-items: center;
 }
 
-footer p {
-    margin: 0 0 0 1.5rem;
-}
+
 h1 {
     font-size: 2.5rem;
     font-weight: 700;

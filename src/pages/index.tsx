@@ -102,9 +102,6 @@ export default function Home(): JSX.Element {
           </h5>
         </article>
       </div>
-      <div style={{ marginTop: theme.spacing.largest, textAlign: "center" }}>
-        <small style={{ opacity: 0.64 }}>Serving clients worldwide.</small>
-      </div>
     </Page>
   );
 }
