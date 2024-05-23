@@ -10,11 +10,6 @@ const nextConfig = {
         destination: "https://billing.stripe.com/p/login/3cs8zxaGw0eQ6ZydQQ",
         permanent: true,
       },
-      {
-        source: "/fulfillment-policy",
-        destination: "/working-with-us",
-        permanent: true,
-      },
     ];
   },
 };
