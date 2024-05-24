@@ -52,7 +52,7 @@ export default function Page({ children }: { children: ReactNode }): JSX.Element
           <Link href="/privacy-policy">Privacy Policy</Link>
         </small>
         <small>
-          <Link href="/fulfillment-policy">Working with Planare</Link>
+          <Link href="/working-with-us">Working with Planare</Link>
         </small>
       </footer>
     </div>
