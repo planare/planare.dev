@@ -1,60 +1,50 @@
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
-import Page from "../components/Page";
-import { theme } from "../components/styles";
+import workingOnCosmo from "../../public/working-on-cosmo.jpg";
+import { Block } from "../components/Block";
+import { Button } from "../components/Button";
+import { Main } from "../components/Main";
+import { Projects } from "../components/Projects";
+import { Typography } from "../components/Typography";
 
-const now = new Date();
-const nowString = now.toLocaleString("en-AU", {
-  timeZone: "Australia/Melbourne",
-  hour: "numeric",
-  minute: "numeric",
-  hour12: true,
-});
+import { Card } from "@/components/Card";
 
 export default function Home(): JSX.Element {
   return (
-    <Page>
+    <Main>
       <Head>
         <title>Planare</title>
       </Head>
-      <div
-        style={{
-          textAlign: "center",
-        }}>
-        <div
-          style={{
-            marginBottom: theme.spacing.largest,
-          }}>
-          <small className="warning">
-            ℹ Check back soon. We are currently updating our website to reflect our latest
-            projects.
-          </small>
-        </div>
-        <h1>
-          {" "}
+      <Block align="center" top="normal">
+        <Typography variant="h1">
           <Balancer>
             You have big ideas. We have the development expertise to bring them to life.
           </Balancer>
-        </h1>
-        <p>
+        </Typography>
+        <Typography bottom="large" variant="p">
           <Balancer>
             We empower startups and small businesses to thrive online through exceptional front-end
             web development. We craft visually stunning, user-friendly websites and web applications
             tailored to your unique brand and goals.
           </Balancer>
-        </p>{" "}
-      </div>
-      <div
-        style={{
-          marginTop: theme.spacing.largest,
-        }}>
-        <article
-          style={{
-            borderBottomLeftRadius: 0,
-            borderBottomRightRadius: 0,
-          }}>
-          <h3>☞ Web & Product Development</h3>
+        </Typography>{" "}
+        <Link href="/new-projects">
+          <Button
+            css={{
+              fontSize: "18px !important",
+              padding: "$small $normal",
+            }}
+            variant="minimal">
+            Tell us about your project &rarr;
+          </Button>
+        </Link>
+      </Block>
+      <Block top="largest">
+        <Card>
+          <Typography variant="h3">☞ Web & Product Development</Typography>
           <p>
             We build the face of your digital presence, ensuring intuitive user experiences,
             responsive designs, and seamless functionality across all devices.{" "}
@@ -74,34 +64,74 @@ export default function Home(): JSX.Element {
             We handle the technical aspects of your website, including hosting, security updates,
             content management, and performance optimization.
           </p>
-          <hr style={{ marginTop: theme.spacing.normal }} />
-          <small>
+
+          <Typography top="normal" variant="small">
             <strong>Pricing:</strong>
             Hourly development is billed at $85/hour. Managed hosting starts at $40/month, and
             domain names start at $40/year. Project packages are customized to your needs and
             budget, providing a clear, upfront project cost.
-          </small>
-        </article>
-        <article
-          className="alternative"
-          style={{
-            borderTopLeftRadius: 0,
-            borderTopRightRadius: 0,
+          </Typography>
+        </Card>
+      </Block>
+      <Typography top="large" variant="h1">
+        Test
+      </Typography>
+
+      <Projects />
+      <Block bottom="normal" top="largest">
+        <Block
+          css={{
+            display: "flex",
+            gap: "$large",
+            height: "100%",
+            position: "relative",
           }}>
-          <h5>
-            We recently developed a portfolio management app,{" "}
-            <a href="https://cosmogroup.io" rel="noreferrer" target="_blank">
-              website
-            </a>{" "}
-            and open-source{" "}
-            <a href="https://github.com/cosmoau/ui" rel="noreferrer" target="_blank">
-              component library
-            </a>{" "}
-            for Cosmo, a fast-growing vacation rental company based in Melbourne.&nbsp;&nbsp;
-            <span style={{ opacity: 0.42 }}>{nowString}</span>
-          </h5>
-        </article>
-      </div>
-    </Page>
+          <Block
+            css={{
+              width: "70%",
+            }}>
+            <h2>Our Story</h2>
+            <p>
+              Planare is led by Jackson Dolman, a seasoned developer and product manager. Jackson
+              has worked with a wide range of clients, from startups to large enterprises, and has a
+              passion for building high-quality web experiences that drive growth and success.{" "}
+            </p>
+            <p>
+              Planare has been shipping high-quality web projects since 2016. Our story began in
+              Melbourne, Australia, and in 2022 we moved to the other side of the world, serving
+              clients globally from our new home in the US. We are a small team of experienced
+              developers and designers who are passionate about building beautiful, performant web
+              experiences.
+            </p>
+            <p>
+              Our strength lies in our ability to understand your unique business needs and
+              translate them into a digital solution that drives growth and success. We believe in
+              the power of collaboration and transparency, working closely with you to ensure your
+              project is delivered on time and on budget.
+            </p>
+            <p>
+              We are flexible to working with your desired tech stack, or we can recommend the best
+              tools and technologies based on your project requirements. We have a preference for
+              modern, performance-driven technologies, and suggest using Next.js with TypeScript for
+              new projects.
+            </p>
+          </Block>
+          <Block
+            css={{
+              width: "30%",
+              position: "relative",
+            }}>
+            <Image alt="The early days of the Cosmo projects." fill src={workingOnCosmo} />
+          </Block>
+        </Block>
+      </Block>
+      <Block align="center" top="largest">
+        <Card variant="alternative">
+          <Typography css={{ margin: 0, padding: "$large" }} variant="h1">
+            Let&apos;s build something great together.
+          </Typography>
+        </Card>
+      </Block>
+    </Main>
   );
 }

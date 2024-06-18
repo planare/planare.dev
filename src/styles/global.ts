@@ -1,0 +1,46 @@
+import { Space_Grotesk } from "next/font/google";
+
+import { globalCss, theme } from "./stitches.config";
+
+export const globalFont = Space_Grotesk({
+    subsets: ["latin-ext"],
+});
+
+export const globalStyles = globalCss({
+    '*': {
+        boxSizing: 'border-box',
+        MozOsxFontSmoothing: 'grayscale',
+        WebkitFontSmoothing: 'antialiased',
+        fontDisplay: 'swap',
+        marginBlockStart: 0,
+    },
+    'body': {
+        padding: 0,
+        margin: 0,
+        fontFamily: theme.fonts.primary,
+        lineHeight: '1.4',
+        fontSize: '17px',
+        color: theme.colors.text,
+        backgroundColor: theme.colors.background,
+    },
+    'a, a:visited, a:active': {
+        color: 'inherit',
+        transition: 'all 0.2s ease',
+        textDecoration: 'none',
+        display: 'inline-block',
+    },
+    'a:hover': {
+        fontWeight: 600,
+        letterSpacing: '-0.0025rem',
+    },
+    'img': {
+        maxWidth: '100%',
+        display: 'block',
+    },
+    'svg': {
+        width: "1.6rem",
+        height: "1.6rem",
+        verticalAlign: "middle",
+        marginRight: "0.5rem",
+}
+});

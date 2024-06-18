@@ -1,10 +1,10 @@
 import Head from "next/head";
 
-import Page from "../components/Page";
+import { Main } from "../components/Main";
 
 export default function FulfillmentPolicy(): JSX.Element {
   return (
-    <Page>
+    <Main>
       <Head>
         <title>Working with Planare</title>
       </Head>
@@ -118,6 +118,6 @@ export default function FulfillmentPolicy(): JSX.Element {
       </ul>
 
       <p>Planare LLC, 651 N Broad Street, Middletown DE 19709, USA.</p>
-    </Page>
+    </Main>
   );
 }

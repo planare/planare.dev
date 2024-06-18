@@ -1,12 +1,13 @@
 import Head from "next/head";
 
-import Page from "../components/Page";
-import { theme } from "../components/styles";
+import { Main } from "../components/Main";
 import { TallyWidget } from "../components/Tally";
+
+import { Block } from "@/components/Block";
 
 export default function NewProjects(): JSX.Element {
   return (
-    <Page>
+    <Main>
       <Head>
         <title>New Projects: Planare</title>
         <script async src="https://tally.so/widgets/embed.js" />
@@ -18,14 +19,11 @@ export default function NewProjects(): JSX.Element {
         life.
       </p>
 
-      <div
-        style={{
-          marginTop: theme.spacing.large,
-        }}>
+      <Block top="large">
         <article className="form">
           <TallyWidget tallyCode="3NAvMj" />
         </article>
-      </div>
-    </Page>
+      </Block>
+    </Main>
   );
 }

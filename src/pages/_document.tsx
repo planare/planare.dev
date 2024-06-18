@@ -1,42 +1,23 @@
 /* eslint-disable react/no-danger */
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentInitialProps,
-  DocumentContext,
-} from "next/document";
+import NextDocument, { DocumentContext, Head, Html, Main, NextScript } from "next/document";
 import React, { ReactElement } from "react";
 
-import { theme } from "../components/styles";
+import { getCssText } from "../styles/stitches.config";
 
-export default class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
-    const initialProps = await Document.getInitialProps(ctx);
+type Props = {
+  css: string;
+};
 
-    return { ...initialProps };
+class Document extends NextDocument<Props> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  static async getInitialProps({ renderPage }: DocumentContext): Promise<any> {
+    const page = await renderPage();
+    const css = getCssText();
+
+    return { ...page, css };
   }
 
   render(): ReactElement {
-    const themeStyles = `
-      :root {
-        --color-background: ${theme.colors.background};
-        --color-text: ${theme.colors.text};
-        --color-link: ${theme.colors.link};
-        --color-accent: ${theme.colors.accent};
-        --color-warning: ${theme.colors.warning};
-        
-        --spacing-large: ${theme.spacing.large};
-        --spacing-largest: ${theme.spacing.largest};
-        --spacing-normal: ${theme.spacing.normal};
-        --spacing-small: ${theme.spacing.small};
-        --spacing-smallest: ${theme.spacing.smallest};
-        
-        --font: ${theme.font};
-      }
-    `;
-
     const domain = "https://planare.dev";
     const title = "Planare";
     const description =
@@ -51,6 +32,8 @@ export default class MyDocument extends Document {
             content="Planare is a web development office based in New York. We focus on helping startups and not-for-profits to build apps and websites that scale."
             name="description"
           />
+
+          <style dangerouslySetInnerHTML={{ __html: " " + this.props.css }} id="stitches" />
 
           <meta content={domain} property="og:url" />
           <meta content={title} property="og:title" />
@@ -72,8 +55,6 @@ export default class MyDocument extends Document {
           <link color="#d7d2fe" href="/safari-pinned-tab.svg" rel="mask-icon" />
           <meta content="#d7d2fe" name="msapplication-TileColor" />
           <meta content="#d7d2fe" name="theme-color" />
-
-          <style dangerouslySetInnerHTML={{ __html: themeStyles }} />
         </Head>
         <body>
           <Main />
@@ -83,3 +64,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+export default Document;

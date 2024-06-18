@@ -1,11 +1,12 @@
 import Head from "next/head";
 
-import Page from "../components/Page";
-import { theme } from "../components/styles";
+import { Main } from "../components/Main";
+
+import { Typography } from "@/components/Typography";
 
 export default function PrivacyPolicy(): JSX.Element {
   return (
-    <Page>
+    <Main>
       <Head>
         <title>Privacy Policy: Planare</title>
       </Head>
@@ -49,13 +50,10 @@ export default function PrivacyPolicy(): JSX.Element {
         If you have any questions about this Privacy Policy or our data practices, please contact us
         at <strong>mail@planare.dev</strong>
       </p>
-      <p
-        style={{
-          marginTop: theme.spacing.large,
-        }}>
+      <Typography top="large" variant="p">
         Effective Date: <strong>May 1, 2024</strong>
-      </p>
+      </Typography>
       <p>Planare LLC, 651 N Broad Street, Middletown DE 19709, USA.</p>
-    </Page>
+    </Main>
   );
 }
