@@ -31,21 +31,21 @@ const TypographyStyled = styled("span", {
   variants: {
     variant: {
       h1: {
-        fontSize: "2.6rem",
+        fontSize: "2.9rem",
         fontWeight: 700,
         lineHeight: "1.2",
         marginBottom: "$normal",
         "&:last-child": { marginBottom: 0 },
       },
       h2: {
-        fontSize: "2.4rem",
+        fontSize: "2.5rem",
         fontWeight: 700,
         lineHeight: "1.3",
         marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
       },
       h3: {
-        fontSize: "1.9rem",
+        fontSize: "2rem",
         fontWeight: 600,
         lineHeight: "1.35",
         marginBottom: "$small",

@@ -13,6 +13,7 @@ import { Projects } from "../components/Projects";
 import { Typography } from "../components/Typography";
 
 import { Card } from "@/components/Card";
+import { Ideas } from "@/components/Ideas";
 
 export default function Home(): JSX.Element {
   return (
@@ -20,7 +21,7 @@ export default function Home(): JSX.Element {
       <Head>
         <title>Planare</title>
       </Head>
-      <Block align="center" container top="normal">
+      <Block align="center" container top="largest">
         <Typography variant="h1">
           <Balancer>A web + product development shop.</Balancer>
         </Typography>
@@ -39,93 +40,113 @@ export default function Home(): JSX.Element {
         </Link>
       </Block>
       <Block align="right" top="largest">
-        <Block bottom="normal">
-          <img src="https://supply.family/wp-content/uploads/2024/04/Bendito_Mockup-PSCv1-iPhone-01-main1.jpg" />
+        <Block
+          bottom="small"
+          css={{
+            height: "50rem",
+            position: "relative",
+            img: {
+              objectFit: "cover",
+              objectPosition: "center",
+              width: "100%",
+              height: "100%",
+            },
+          }}>
+          <Image
+            alt=""
+            fill
+            src="https://supply.family/wp-content/uploads/2023/10/Bendito_Mockup-MT-MacBook_Pro-06_32083.jpg"
+          />
         </Block>
-        <Typography variant="small">Website for El Gordo</Typography>
+        <Typography variant="small">Website Development for El Gordo</Typography>
       </Block>
-      <Block
-        container
-        css={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "$normal",
-        }}
-        top="largest">
-        <Card>
-          <Typography bottom="normal" variant="h4">
-            Websites
-          </Typography>
-          <Typography variant="p">
-            <Typography inline="small" variant="span">
-              ▧
+      <Block container top="largest">
+        <Typography variant="p">&mdash; Our Services</Typography>
+        <Block
+          css={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "$normal",
+          }}
+          top="normal">
+          <Card>
+            <Typography bottom="normal" variant="h4">
+              Websites
             </Typography>
-            Design & Development
-          </Typography>
-          <Typography variant="p">
-            <Typography inline="small" variant="span">
-              ▧
+            <Typography variant="p">
+              <Typography inline="small" variant="span">
+                ▧
+              </Typography>
+              Design & Development
             </Typography>
-            Maintenance & Support
-          </Typography>
-          <Typography variant="p">
-            <Typography inline="small" variant="span">
-              ▧
+            <Typography variant="p">
+              <Typography inline="small" variant="span">
+                ▧
+              </Typography>
+              Maintenance & Support
             </Typography>
-            Hosting & Management
-          </Typography>
-        </Card>
-        <Card>
-          <Typography bottom="normal" variant="h4">
-            Product
-          </Typography>
-          <Typography variant="p">
-            <Typography inline="small" variant="span">
-              ▧
+            <Typography variant="p">
+              <Typography inline="small" variant="span">
+                ▧
+              </Typography>
+              Hosting & Management
             </Typography>
-            Web Applications
-          </Typography>
-          <Typography variant="p">
-            <Typography inline="small" variant="span">
-              ▧
+          </Card>
+          <Card>
+            <Typography bottom="normal" variant="h4">
+              Product
             </Typography>
-            MVP Development
-          </Typography>
-          <Typography variant="p">
-            <Typography inline="small" variant="span">
-              ▧
+            <Typography variant="p">
+              <Typography inline="small" variant="span">
+                ▧
+              </Typography>
+              Web Applications
             </Typography>
-            Product Strategy
-          </Typography>
-        </Card>
-        <Card>
-          <Typography bottom="normal" variant="h4">
-            Consulting
-          </Typography>
-          <Typography variant="p">
-            <Typography inline="small" variant="span">
-              ▧
+            <Typography variant="p">
+              <Typography inline="small" variant="span">
+                ▧
+              </Typography>
+              MVP Development
             </Typography>
-            Web Technologies
-          </Typography>
-          <Typography variant="p">
-            <Typography inline="small" variant="span">
-              ▧
+            <Typography variant="p">
+              <Typography inline="small" variant="span">
+                ▧
+              </Typography>
+              Product Strategy
             </Typography>
-            UX/UI Design
-          </Typography>
-          <Typography variant="p">
-            <Typography inline="small" variant="span">
-              ▧
+          </Card>
+          <Card>
+            <Typography bottom="normal" variant="h4">
+              Consulting
             </Typography>
-            Project Management
-          </Typography>
-        </Card>
+            <Typography variant="p">
+              <Typography inline="small" variant="span">
+                ▧
+              </Typography>
+              Web Technologies
+            </Typography>
+            <Typography variant="p">
+              <Typography inline="small" variant="span">
+                ▧
+              </Typography>
+              UX/UI Design
+            </Typography>
+            <Typography variant="p">
+              <Typography inline="small" variant="span">
+                ▧
+              </Typography>
+              Project Management
+            </Typography>
+          </Card>
+        </Block>
       </Block>
       <Block container top="largest">
         <Projects />
       </Block>
-      <Block bottom="normal" container top="largest">
+      <Block top="largest">
+        <Ideas />
+      </Block>
+      <Block bottom="largest" container top="largest">
         <Block
           css={{
             display: "flex",
@@ -137,7 +158,11 @@ export default function Home(): JSX.Element {
             css={{
               width: "70%",
             }}>
-            <h2>Our Story</h2>
+            <Typography variant="p">&mdash; About Us</Typography>
+            <Typography top="normal" variant="h3">
+              We love the web.
+            </Typography>
+
             <p>
               Planare is led by Jackson Dolman, a seasoned developer and product manager. Jackson
               has worked with a wide range of clients, from startups to large enterprises, and has a
@@ -176,13 +201,6 @@ export default function Home(): JSX.Element {
             <Image alt="The early days of the Cosmo projects." fill src={workingOnCosmo} />
           </Block>
         </Block>
-      </Block>
-      <Block align="center" top="largest">
-        <Card variant="alternative">
-          <Typography css={{ margin: 0, padding: "$large" }} variant="h1">
-            Let&apos;s build something great together.
-          </Typography>
-        </Card>
       </Block>
     </Main>
   );

@@ -10,7 +10,7 @@ import { Typography } from "./Typography";
 
 import { styled } from "@/styles/stitches.config"; // Adjust the import path as necessary
 
-const ProjectsTableStyled = styled("div", {
+const ProjectsStyled = styled("div", {
   table: {
     width: "100%",
     borderCollapse: "collapse",
@@ -36,8 +36,8 @@ const ProjectsTableStyled = styled("div", {
 
 export function Projects(): JSX.Element {
   return (
-    <ProjectsTableStyled>
-      <Typography variant="h3">Selected Projects</Typography>
+    <ProjectsStyled>
+      <Typography variant="p">&mdash; Selected Projects</Typography>
       <table>
         <tbody>
           {projectsData.map((project, index) => (
@@ -78,6 +78,6 @@ export function Projects(): JSX.Element {
           of our work.
         </Typography>
       </Block>
-    </ProjectsTableStyled>
+    </ProjectsStyled>
   );
 }

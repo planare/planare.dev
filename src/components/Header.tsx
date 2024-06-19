@@ -10,11 +10,11 @@ import { Typography } from "./Typography";
 import { styled } from "@/styles/stitches.config";
 
 const HeaderStyled = styled("header", {
-  padding: "$smallest $normal",
+  padding: "$small $normal 0 $normal",
   display: "flex",
 
   margin: "0 auto",
-  backgroundColor: "$background",
+
   justifyContent: "space-between",
   alignItems: "center",
 
