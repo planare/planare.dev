@@ -1,7 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
 
 import { projectsData } from "../data/projects";
+
+import { Badge } from "./Badge";
+import { Block } from "./Block";
+import { Typography } from "./Typography";
 
 import { styled } from "@/styles/stitches.config"; // Adjust the import path as necessary
 
@@ -14,8 +19,17 @@ const ProjectsTableStyled = styled("div", {
 
     td: {
       textAlign: "left",
-      padding: "$small 0", // Assuming 'small' is defined in your theme's space scale
-      borderBottom: "1px solid $accent", // Assuming 'accent' is defined in your theme's colors
+      padding: "$small 0",
+      borderBottom: "1px solid $accent",
+
+      img: {
+        transition: "all 0.4s ease-in-out",
+      },
+      "&:hover": {
+        img: {
+          transform: "scale(0.95)",
+        },
+      },
     },
   },
 });
@@ -23,43 +37,47 @@ const ProjectsTableStyled = styled("div", {
 export function Projects(): JSX.Element {
   return (
     <ProjectsTableStyled>
-      <h2>Selected Projects</h2>
+      <Typography variant="h3">Selected Projects</Typography>
       <table>
         <tbody>
           {projectsData.map((project, index) => (
             <tr key={index}>
               <td>
-                <div style={{ width: "15rem" }}>
-                  <img alt={`${project.title} logo`} src={project.image} />
-                </div>
+                <Block css={{ width: "20rem", height: "12rem", marginRight: "$normal" }}>
+                  <a href={project.url} rel="noreferrer" target="_blank">
+                    <Image alt={`${project.title} logo`} fill src={project.image} />
+                  </a>
+                </Block>
               </td>
               <td>
-                <h5>
-                  {project.title}&nbsp;&nbsp;
-                  <span className="badge alternative">{project.year}</span>
-                </h5>
-                <small>{project.description}</small>
-                <div
-                  style={{
-                    display: "flex",
-                    gap: "$smallest",
+                <Block bottom="smallest" flexAlign="center">
+                  <Typography inline="smallest" variant="h5">
+                    {project.title}&nbsp;&nbsp;
+                  </Typography>
+                  <Badge variant="alternative">{project.year}</Badge>
+                </Block>
+                <Typography variant="small">{project.description}</Typography>
+                <Block
+                  css={{
+                    gap: "$small",
                     flexWrap: "wrap",
                     paddingTop: "$small",
-                  }}>
+                  }}
+                  flexAlign="center">
                   {project.work &&
-                    project.work.map((work, idx) => <span key={idx}>{work.title}</span>)}
-                </div>
+                    project.work.map((work, idx) => <Badge key={idx}>{work.title}</Badge>)}
+                </Block>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      <div style={{ paddingTop: "$normal" }}>
-        <small>
+      <Block top="small">
+        <Typography variant="small">
           ☞ Get in touch if you&apos;d like to learn more about these projects or see more examples
           of our work.
-        </small>
-      </div>
+        </Typography>
+      </Block>
     </ProjectsTableStyled>
   );
 }

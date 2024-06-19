@@ -18,11 +18,11 @@ const ButtonStyled = styled("button", {
   cursor: "pointer",
   fontSize: "1rem",
   transition: "all 0.2s ease",
-  fontWeight: 500,
+  fontWeight: 600,
   border: "none",
   fontFamily: "$primary",
   position: "relative",
-  display: "inline-block",
+  display: "inline-flex",
 
   // Variants
   variants: {
@@ -33,7 +33,6 @@ const ButtonStyled = styled("button", {
         "&:hover": {
           background: "$text",
           color: "$background",
-          fontWeight: 600,
         },
       },
       default: {
@@ -42,16 +41,7 @@ const ButtonStyled = styled("button", {
         "&:hover": {
           background: "$background",
           color: "$text",
-          fontWeight: 600,
         },
-      },
-    },
-    inline: {
-      true: {
-        display: "inline-flex",
-      },
-      false: {
-        display: "block",
       },
     },
   },
@@ -69,7 +59,6 @@ export const Button = ({
         marginRight: inline ? `$${inline}` : undefined,
         ...css,
       }}
-      inline={inline ? true : false}
       type="button"
       variant={variant}>
       {children}

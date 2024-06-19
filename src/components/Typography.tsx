@@ -9,7 +9,20 @@ interface TypographyProps {
   css?: CSS;
   inline?: keyof typeof theme.space;
   top?: keyof typeof theme.space;
-  variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "ul" | "ol" | "li" | "small" | "code";
+  variant:
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
+    | "h6"
+    | "p"
+    | "ul"
+    | "ol"
+    | "li"
+    | "small"
+    | "code"
+    | "span";
 }
 
 const TypographyStyled = styled("span", {
@@ -76,6 +89,7 @@ const TypographyStyled = styled("span", {
         "&:last-child": { marginBottom: 0 },
       },
       code: { fontFamily: "monospace" },
+      span: {},
     },
     top: {
       large: { marginTop: "$large" },
@@ -92,7 +106,7 @@ const TypographyStyled = styled("span", {
       smallest: { marginBottom: "$smallest" },
     },
     inline: {
-      true: { display: "inline-flex", margin: "0", padding: 0, verticalAlign: "middle" },
+      true: { display: "inline-block", marginBottom: "0 !important" },
       false: { display: "block" },
     },
   },

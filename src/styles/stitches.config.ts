@@ -7,7 +7,7 @@ export const { styled, globalCss, getCssText, theme } = createStitches({
             text: '#010163',
             link: 'rgb(226, 225, 241)',
             accent: 'rgb(210, 205, 255)',
-            warning: 'rgb(255 156 47)',
+            warning: 'rgb(248, 180, 107)',
             border: 'rgb(198, 195, 220)',
             orange: 'rgb(255, 156, 47)',
         },

@@ -8,6 +8,7 @@ interface BlockProps {
   bottom?: keyof typeof theme.space;
   children?: ReactNode;
   className?: string;
+  container?: boolean;
   css?: CSS;
   flexAlign?: "flex-start" | "flex-end" | "center" | "baseline" | "stretch";
   justify?:
@@ -22,7 +23,15 @@ interface BlockProps {
 
 const BlockStyled = styled("div", {
   position: "relative",
-  // Default styles can be defined here if needed
+
+  variants: {
+    container: {
+      true: {
+        maxWidth: "80rem",
+        margin: "0 auto",
+      },
+    },
+  },
 });
 
 export const Block = ({
@@ -33,11 +42,13 @@ export const Block = ({
   align,
   flexAlign,
   justify,
+  container,
   className,
 }: BlockProps): JSX.Element => {
   return (
     <BlockStyled
       className={className}
+      container={container}
       css={{
         marginTop: top ? `$${top}` : undefined,
         marginBottom: bottom ? `$${bottom}` : undefined,

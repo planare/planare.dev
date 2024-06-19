@@ -1,12 +1,13 @@
 import { CSS } from "@stitches/react";
 import { ReactNode } from "react";
 
-import { styled } from "@/styles/stitches.config"; // Adjust the import path as necessary
+import { styled, theme } from "@/styles/stitches.config"; // Adjust the import path as necessary
 
 interface BadgeProps {
   children: ReactNode;
   css?: CSS;
-  variant?: "default" | "alternative";
+  inline?: keyof typeof theme.space;
+  variant?: "default" | "alternative" | "warning";
 }
 
 const BadgeStyled = styled("span", {
@@ -15,8 +16,8 @@ const BadgeStyled = styled("span", {
   border: "0.1rem solid $text",
   padding: "0.25rem 0.5rem",
   borderRadius: "0.25rem",
-  marginRight: "0.5rem",
   fontSize: "0.85rem",
+  display: "inline-flex",
 
   // Variants
   variants: {
@@ -28,13 +29,22 @@ const BadgeStyled = styled("span", {
         backgroundColor: "$accent",
         borderColor: "$accent",
       },
+      warning: {
+        backgroundColor: "$warning",
+        borderColor: "$warning",
+      },
     },
   },
 });
 
-export const Badge = ({ children, variant = "default", css }: BadgeProps): JSX.Element => {
+export const Badge = ({ children, inline, variant = "default", css }: BadgeProps): JSX.Element => {
   return (
-    <BadgeStyled css={css} variant={variant}>
+    <BadgeStyled
+      css={{
+        marginRight: inline ? `$${inline}` : undefined,
+        ...css,
+      }}
+      variant={variant}>
       {children}
     </BadgeStyled>
   );

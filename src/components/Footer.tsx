@@ -1,4 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
+
+import logo from "../../public/logo-2024-inverse.png";
 
 import { Block } from "./Block";
 import { Typography } from "./Typography";
@@ -6,38 +9,38 @@ import { Typography } from "./Typography";
 import { styled } from "@/styles/stitches.config"; // Adjust the import path as necessary
 
 const FooterStyled = styled("footer", {
-  display: "flex",
-  justifyContent: "space-between",
-  padding: "1rem 2rem",
-  background: "$accent", // Assuming you have defined 'accent' in your theme
-  color: "$text", // Assuming you have defined 'text' in your theme
+  padding: "$normal",
+  background: "#05052b",
+  color: "$background",
   fontSize: "0.9rem",
-  fontWeight: 500,
   marginTop: "4rem",
-  a: {
-    color: "$text", // Assuming you have defined 'text' in your theme
-  },
 });
 
 export const Footer = (): JSX.Element => {
   return (
     <FooterStyled>
-      <Block align="center" top="normal">
-        <Typography css={{ opacity: 0.5 }} variant="small">
-          Typeface in use is Space Grotesk by{" "}
-          <a href="https://floriankarsten.com/">Florian Karsten</a>. Hosted on{" "}
-          <a href="https://vercel.com/">Vercel</a>.
+      <Block className="logo">
+        <Link href="/">
+          <Image alt="Logo" quality={100} src={logo} width={175} />
+        </Link>
+      </Block>
+      <Block top="normal">
+        <Typography variant="small">
+          Typeface in use is{" "}
+          <a href="https://floriankarsten.com/">Space Grotesk by Florian Karsten</a>
         </Typography>
       </Block>
-      <Typography css={{ fontWeight: 500 }} variant="small">
-        {new Date().getFullYear()} Planare LLC, All Rights Reserved.
-      </Typography>
-      <Typography variant="small">
-        <Link href="/privacy-policy">Privacy Policy</Link>
-      </Typography>
-      <Typography variant="small">
-        <Link href="/fulfillment-policy">Working with Planare</Link>
-      </Typography>
+      <Block top="normal">
+        <Typography css={{ fontWeight: 500 }} inline="normal" variant="small">
+          {new Date().getFullYear()} Planare LLC, All Rights Reserved.
+        </Typography>
+        <Typography inline="small" variant="small">
+          <Link href="/privacy-policy">Privacy Policy</Link>
+        </Typography>
+        <Typography inline="small" variant="small">
+          <Link href="/working-with-us">Working with Planare</Link>
+        </Typography>
+      </Block>
     </FooterStyled>
   );
 };

@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,18 +20,12 @@ export default function Home(): JSX.Element {
       <Head>
         <title>Planare</title>
       </Head>
-      <Block align="center" top="normal">
+      <Block align="center" container top="normal">
         <Typography variant="h1">
-          <Balancer>
-            You have big ideas. We have the development expertise to bring them to life.
-          </Balancer>
+          <Balancer>A web + product development shop.</Balancer>
         </Typography>
         <Typography bottom="large" variant="p">
-          <Balancer>
-            We empower startups and small businesses to thrive online through exceptional front-end
-            web development. We craft visually stunning, user-friendly websites and web applications
-            tailored to your unique brand and goals.
-          </Balancer>
+          <Balancer>We help great companies create user-centric, visually</Balancer>
         </Typography>{" "}
         <Link href="/new-projects">
           <Button
@@ -42,43 +38,94 @@ export default function Home(): JSX.Element {
           </Button>
         </Link>
       </Block>
-      <Block top="largest">
+      <Block align="right" top="largest">
+        <Block bottom="normal">
+          <img src="https://supply.family/wp-content/uploads/2024/04/Bendito_Mockup-PSCv1-iPhone-01-main1.jpg" />
+        </Block>
+        <Typography variant="small">Website for El Gordo</Typography>
+      </Block>
+      <Block
+        container
+        css={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: "$normal",
+        }}
+        top="largest">
         <Card>
-          <Typography variant="h3">☞ Web & Product Development</Typography>
-          <p>
-            We build the face of your digital presence, ensuring intuitive user experiences,
-            responsive designs, and seamless functionality across all devices.{" "}
-          </p>
-          <h3>☞ Consulting & Strategy</h3>
-          <p>
-            We provide expert guidance on web technologies, design trends, and digital marketing
-            strategies to help you make informed decisions and drive growth.{" "}
-          </p>
-          <h3>☞ Project Management</h3>
-          <p>
-            We guide your project from inception to launch, ensuring seamless communication,
-            efficient workflows, and timely delivery.
-          </p>
-          <h3>☞ Maintenance & Support</h3>
-          <p>
-            We handle the technical aspects of your website, including hosting, security updates,
-            content management, and performance optimization.
-          </p>
-
-          <Typography top="normal" variant="small">
-            <strong>Pricing:</strong>
-            Hourly development is billed at $85/hour. Managed hosting starts at $40/month, and
-            domain names start at $40/year. Project packages are customized to your needs and
-            budget, providing a clear, upfront project cost.
+          <Typography bottom="normal" variant="h4">
+            Websites
+          </Typography>
+          <Typography variant="p">
+            <Typography inline="small" variant="span">
+              ▧
+            </Typography>
+            Design & Development
+          </Typography>
+          <Typography variant="p">
+            <Typography inline="small" variant="span">
+              ▧
+            </Typography>
+            Maintenance & Support
+          </Typography>
+          <Typography variant="p">
+            <Typography inline="small" variant="span">
+              ▧
+            </Typography>
+            Hosting & Management
+          </Typography>
+        </Card>
+        <Card>
+          <Typography bottom="normal" variant="h4">
+            Product
+          </Typography>
+          <Typography variant="p">
+            <Typography inline="small" variant="span">
+              ▧
+            </Typography>
+            Web Applications
+          </Typography>
+          <Typography variant="p">
+            <Typography inline="small" variant="span">
+              ▧
+            </Typography>
+            MVP Development
+          </Typography>
+          <Typography variant="p">
+            <Typography inline="small" variant="span">
+              ▧
+            </Typography>
+            Product Strategy
+          </Typography>
+        </Card>
+        <Card>
+          <Typography bottom="normal" variant="h4">
+            Consulting
+          </Typography>
+          <Typography variant="p">
+            <Typography inline="small" variant="span">
+              ▧
+            </Typography>
+            Web Technologies
+          </Typography>
+          <Typography variant="p">
+            <Typography inline="small" variant="span">
+              ▧
+            </Typography>
+            UX/UI Design
+          </Typography>
+          <Typography variant="p">
+            <Typography inline="small" variant="span">
+              ▧
+            </Typography>
+            Project Management
           </Typography>
         </Card>
       </Block>
-      <Typography top="large" variant="h1">
-        Test
-      </Typography>
-
-      <Projects />
-      <Block bottom="normal" top="largest">
+      <Block container top="largest">
+        <Projects />
+      </Block>
+      <Block bottom="normal" container top="largest">
         <Block
           css={{
             display: "flex",
@@ -114,6 +161,11 @@ export default function Home(): JSX.Element {
               tools and technologies based on your project requirements. We have a preference for
               modern, performance-driven technologies, and suggest using Next.js with TypeScript for
               new projects.
+            </p>
+            <p>
+              Pricing:Hourly development is billed at $85/hour. Managed hosting starts at $40/month,
+              and domain names start at $40/year. Project packages are customized to your needs and
+              budget, providing a clear, upfront project cost.
             </p>
           </Block>
           <Block

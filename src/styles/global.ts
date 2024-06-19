@@ -27,15 +27,14 @@ export const globalStyles = globalCss({
         color: 'inherit',
         transition: 'all 0.2s ease',
         textDecoration: 'none',
-        display: 'inline-block',
     },
     'a:hover': {
-        fontWeight: 600,
-        letterSpacing: '-0.0025rem',
+        opacity: 0.8,
     },
     'img': {
         maxWidth: '100%',
         display: 'block',
+        borderRadius: '1rem',
     },
     'svg': {
         width: "1.6rem",

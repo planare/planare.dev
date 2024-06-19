@@ -7,9 +7,8 @@ interface MainProps {
 }
 
 const MainStyled = styled("div", {
-  padding: "4rem 2rem",
+  padding: "0 $normal",
   minHeight: "90vh",
-  maxWidth: "80rem",
   margin: "0 auto",
 });
 
