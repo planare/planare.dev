@@ -37,7 +37,7 @@ const TypographyStyled = styled("span", {
         marginBottom: "$normal",
         "&:last-child": { marginBottom: 0 },
         phone: {
-          fontSize: "2.4rem",
+          fontSize: "2.2rem",
         },
       },
       h2: {
@@ -47,7 +47,7 @@ const TypographyStyled = styled("span", {
         marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
         phone: {
-          fontSize: "2.2rem",
+          fontSize: "2rem",
         },
       },
       h3: {
@@ -57,7 +57,7 @@ const TypographyStyled = styled("span", {
         marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
         phone: {
-          fontSize: "1.8rem",
+          fontSize: "1.7rem",
         },
       },
       h4: {
@@ -66,6 +66,9 @@ const TypographyStyled = styled("span", {
         lineHeight: "1.4",
         marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
+        phone: {
+          fontSize: "1.5rem",
+        },
       },
       h5: {
         fontSize: "1.3rem",
@@ -73,6 +76,7 @@ const TypographyStyled = styled("span", {
         lineHeight: "1.5",
         marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
+
       },
       h6: {
         fontSize: "1.2rem",
