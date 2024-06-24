@@ -26,8 +26,12 @@ const Title = (): JSX.Element => (
     <Block
       css={{
         gap: "$small",
+        phone: {
+          flexDirection: "column",
+          alignItems: "center",
+        },
       }}
-      flexAlign="flex-start"
+      flexAlign="center"
       justify="center"
       top="normal">
       <a href="mailto:mail@planare.dev">

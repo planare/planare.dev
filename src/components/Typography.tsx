@@ -76,7 +76,6 @@ const TypographyStyled = styled("span", {
         lineHeight: "1.5",
         marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
-
       },
       h6: {
         fontSize: "1.2rem",

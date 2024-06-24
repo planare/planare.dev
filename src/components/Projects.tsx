@@ -87,11 +87,15 @@ export function Projects(): JSX.Element {
                 <Badge variant="alternative">{project.year}</Badge>
               </Block>
 
-              <Typography variant="small" css={{
-                phone: {
-                  display: "none"
-                }
-              }}>{project.description}</Typography>
+              <Typography
+                css={{
+                  phone: {
+                    display: "none",
+                  },
+                }}
+                variant="small">
+                {project.description}
+              </Typography>
               <Block
                 css={{
                   gap: "$small",

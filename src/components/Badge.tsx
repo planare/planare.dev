@@ -7,7 +7,7 @@ interface BadgeProps {
   children: ReactNode;
   css?: CSS;
   inline?: keyof typeof theme.space;
-  variant?: "default" | "alternative" | "warning";
+  variant?: "default" | "alternative";
 }
 
 const BadgeStyled = styled("span", {
@@ -26,10 +26,6 @@ const BadgeStyled = styled("span", {
       alternative: {
         backgroundColor: "$accent",
         borderColor: "$accent",
-      },
-      warning: {
-        backgroundColor: "$warning",
-        borderColor: "$warning",
       },
     },
   },

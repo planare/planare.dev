@@ -14,10 +14,8 @@ export const { styled, keyframes, globalCss, getCssText, theme } = createStitche
             background: 'rgb(255,255,255)',
             text: '#010163',
             accent: 'rgb(210, 205, 255)',
-            warning: 'rgb(248, 180, 107)',
             overlay: 'rgba(1, 1, 99, 0.05)',
             border: 'rgba(1, 1, 99, 0.2)',
-            orange: 'rgb(255, 156, 47)',
         },
         space: {
             large: '4rem',
