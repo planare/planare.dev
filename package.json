@@ -1,31 +1,32 @@
 {
   "name": "planare.dev",
   "description": "A very barebones landing page for Planare.",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "author": "Jackson <mail@dolmios.com>",
   "bugs": {
     "url": "https://github.com/planare/planare.dev/issues"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.3.0",
-    "next": "^14.2.3",
+    "@stitches/react": "^1.2.8",
+    "@vercel/analytics": "^1.3.1",
+    "next": "^14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-wrap-balancer": "^1.1.0",
+    "react-wrap-balancer": "^1.1.1",
     "sharp": "^0.33.4",
     "swr": "^2.2.5",
-    "typescript": "^5.4.5",
-    "vercel": "^34.2.2"
+    "typescript": "^5.5.2",
+    "vercel": "^34.2.7"
   },
   "devDependencies": {
-    "@next/env": "^14.2.3",
-    "@types/node": "^20.12.12",
-    "@types/react": "^18.3.2",
+    "@next/env": "^14.2.4",
+    "@types/node": "^20.14.8",
+    "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "eslint": "^8.57.0",
     "eslint-config-dolmios": "^1.10.1",
     "next-sitemap": "^4.2.3",
-    "prettier": "^3.2.5"
+    "prettier": "^3.3.2"
   },
   "homepage": "https://planare.dev",
   "keywords": [
@@ -50,7 +51,8 @@
     "lint": "eslint . --ext js,jsx,ts,tsx --fix",
     "prettier": "prettier --write '**/*.{js,jsx,tsx}' '!node_modules/**' '!.git/**' '!.next/**'",
     "sitemap": "next-sitemap",
-    "tidy": "pnpm lint && pnpm prettier"
+    "tidy": "pnpm lint && pnpm prettier",
+    "bump": "pnpm update && pnpm tidy && pnpm build"
   },
   "eslintConfig": {
     "extends": [

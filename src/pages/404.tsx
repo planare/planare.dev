@@ -1,8 +1,9 @@
 import Head from "next/head";
 import useSWR from "swr";
 
-import Page from "../components/Page";
-import { theme } from "../components/styles";
+import { Main } from "../components/Main";
+
+import { Typography } from "@/components/Typography";
 
 interface IQuotable {
   _id: string;
@@ -21,20 +22,19 @@ export default function Custom404(): JSX.Element {
   const { data } = useSWR<IQuotable>("https://api.quotable.io/random?size=1", fetcher);
 
   return (
-    <Page>
+    <Main>
       <Head>
         <title>404: Planare</title>
       </Head>
 
       {data && (
-        <h1
-          style={{
-            marginTop: theme.spacing.largest,
-          }}>
+        <Typography top="large" variant="h1">
           {data.content} — {data.author}
-        </h1>
+        </Typography>
       )}
-      <p style={{ marginTop: theme.spacing.large }}>This page could not be found.</p>
-    </Page>
+      <Typography top="large" variant="p">
+        This page could not be found.
+      </Typography>
+    </Main>
   );
 }
