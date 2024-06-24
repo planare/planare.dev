@@ -23,5 +23,5 @@ export function Theme({ children }: { children: ReactNode }): JSX.Element {
     return <div />;
   }
 
-  return <ThemeStyled className={mounted && globalFont.className}>{children}</ThemeStyled>;
+  return <ThemeStyled style={globalFont.style}>{children}</ThemeStyled>;
 }

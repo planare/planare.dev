@@ -56,7 +56,7 @@ export const Footer = (): JSX.Element => {
           flexAlign="center"
           justify="center">
           <Typography inline="small" variant="small">
-            <Link href="/privacy-policy">
+            <Link href="https://www.linkedin.com/company/planaredev/">
               <Typography inline="smallest" variant="span">
                 ▧
               </Typography>
