@@ -18,17 +18,34 @@ const HeaderStyled = styled("header", {
   justifyContent: "space-between",
   alignItems: "center",
 
+  a: {
+    "&:hover": {
+      textDecoration: "underline",
+      opacity: 0.8,
+    },
+  },
+
   ".logo": {
     background: "$background",
     border: "2px solid $background",
     padding: "0.25rem 0.5rem",
-    borderRadius: "0.50rem",
+    borderRadius: "$normal",
     transition: "all 0.2s ease-in-out",
+
+    img: {
+      borderRadius: "0",
+    },
 
     "&:hover": {
       background: "rgba(255,255,255, 0.85)",
       borderColor: "$text",
     },
+  },
+
+  phone: {
+    flexDirection: "column",
+    gap: "$normal",
+    padding: "$normal 0",
   },
 });
 
@@ -54,7 +71,13 @@ export function Header(): JSX.Element {
         </a>
 
         <Link href="/new-projects">
-          <Button type="button">✹ New Project</Button>
+          <Button type="button">
+            {" "}
+            <Typography inline="smallest" variant="span">
+              ▧
+            </Typography>
+            New Project
+          </Button>
         </Link>
       </Block>
     </HeaderStyled>

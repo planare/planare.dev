@@ -3,10 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
-  images: {
-    domains: ["via.placeholder.com", "supply.family"],
-  },
-
   async redirects() {
     return [
       {

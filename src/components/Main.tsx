@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { styled } from "@/styles/stitches.config"; // Adjust the import path as necessary
+import { styled } from "@/styles/stitches.config";
 
 interface MainProps {
   children: ReactNode;

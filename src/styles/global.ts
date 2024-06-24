@@ -34,7 +34,7 @@ export const globalStyles = globalCss({
     'img': {
         maxWidth: '100%',
         display: 'block',
-        borderRadius: '1rem',
+        borderRadius: '0.75rem',
     },
     'svg': {
         width: "1.6rem",

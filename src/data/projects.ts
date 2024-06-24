@@ -1,10 +1,10 @@
 export const projectsData = [
     {
-        image: "https://via.placeholder.com/150",
+        image: "/images/projects/cosmogroup.png",
         title: "Cosmo",
         year: "Since 2019",
         url: "https://cosmogroup.io",
-        description: "Cosmo is a vacation rental company based in Melbourne, Australia. We partnered with Cosmo at day one to serve as their engineering team, developing a suite of tools and technology to support their rapid growth. We employed a modern, performance-driven tech stack; Next.js, TypeScript, and Stitches.",
+        description: "Cosmo is a vacation rental company based in Melbourne, Australia. As their engineering partner from day one, we've developed a suite of performant, scalable tools and technologies to support their rapid growth. Our web application, internal dashboard, booking platform, and project management tools, built using a modern tech stack (Next.js, TypeScript, Stitches), enable Cosmo to deliver seamless experiences to their customers and efficiently manage their operations.",
         work: [{
             title: "Web App",
             description: "todo",
@@ -27,30 +27,11 @@ export const projectsData = [
         }]
     },
     {
-        image: "https://via.placeholder.com/150",
-        title: "Crime Stoppers Victoria",
-        year: "2020",
-        url: "https://crimestoppersvic.com.au",
-        description: "Crime Stoppers Victoria is a not-for-profit organization that provides the community with a confidential reporting service to help solve and prevent crime. We worked with CSV to redesign and rebuild their website, focusing on accessibility, usability, and performance. We partnered with a local cybersecurity firm to ensure the highest level of data security. We used a custom Wordpress.org solution to provide a flexible, easy-to-use content management system.",
-        work: [{
-            title: "Website",
-            description: "todo",
-        },
-        {
-            title: "Reporting Platform",
-            description: "todo",
-        },
-        {
-            title: "Content Management",
-            description: "todo",
-        }]
-    },
-    {
-        image: "https://via.placeholder.com/150",
+        image: "/images/projects/elgordo.png",
         title: "El Gordo",
         year: "Since 2020",
         url: "https://elgordobendigo.com",
-        description: "El Gordo a local Spanish cafe based in Bendigo, Victoria. We partnered with El Gordo to develop a new website and launch an online ordering platform. We integrated with Square POS to provide a seamless ordering experience for customers. Since launch, El Gordo has expanded to a second location.",
+        description: "El Gordo is a growing Spanish cafe with a passion for authentic cuisine. We partnered with them to develop a straightforward yet engaging website and seamlessly integrate it with Square POS. This streamlined solution has empowered them to expand to a second location, driving growth and enhancing the customer experience.",
         work: [{
             title: "Website",
             description: "todo",
@@ -65,10 +46,10 @@ export const projectsData = [
         }]
     },
     {
-        image: "https://via.placeholder.com/150",
+        image: "/images/projects/bendigospeechworks.png",
         title: "Bendigo Speech Works",
         year: "Since 2021",
-        description: "Bendigo Speech Works is a speech pathology clinic based in Bendigo, Victoria. We partnered with Bendigo Speech Works to develop a new website and establish an online referral system. We also helped their team move to Google Workspace for improved collaboration and communication, drastically increasing team efficiency.",
+        description: "Bendigo Speech Works is a thriving speech pathology clinic dedicated to helping clients communicate effectively. We partnered with them to develop a new website and implement a user-friendly online referral system, streamlining access to their services. Additionally, our technology strategy consultation led to the successful adoption of Google Workspace, significantly improving team collaboration and overall efficiency.",
         url: "https://bendigospeechworks.com.au",
         work: [{
             title: "Website",
@@ -82,5 +63,28 @@ export const projectsData = [
             title: "Technology Strategy",
             description: "todo",
         }]
-    }
+    },
+    {
+        image: "/images/projects/crimestoppersvic.png",
+        title: "Crime Stoppers Victoria",
+        year: "2020",
+        url: "https://crimestoppersvic.com.au",
+        description: "Crime Stoppers Victoria is a not-for-profit organization dedicated to community safety. We redesigned and rebuilt their website with a focus on accessibility, usability, and performance, ensuring a welcoming and informative experience for users.  Our custom WordPress.org solution, fortified with top-tier cybersecurity measures, provides a secure and user-friendly content management system for their team.",
+        work: [{
+            title: "Website",
+            description: "todo",
+        },
+        {
+            title: "Cybersecurity",
+            description: "todo",
+        },
+        {
+            title: "Reporting",
+            description: "todo",
+        },
+        {
+            title: "Content Management",
+            description: "todo",
+        }]
+    },
 ];

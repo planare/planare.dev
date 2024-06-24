@@ -1,7 +1,7 @@
 import { CSS } from "@stitches/react";
 import { ReactNode } from "react";
 
-import { styled } from "@/styles/stitches.config"; // Adjust the import path as necessary
+import { styled } from "@/styles/stitches.config";
 
 interface CardProps {
   children: ReactNode;
@@ -9,25 +9,28 @@ interface CardProps {
   variant?: "default" | "alternative" | "form";
 }
 
-const CardStyled = styled("article", {
-  // Base styles
+const CardStyled = styled("div", {
   padding: "2rem",
-  borderRadius: "0.25rem",
+  borderRadius: "$small",
+  height: "100%",
+  border: "0.1rem solid transparent",
 
-  // Variants
   variants: {
     variant: {
       default: {
         background: "$text",
         color: "$background",
+        borderColor: "$text",
       },
       alternative: {
-        background: "$link",
+        background: "$overlay",
         color: "$text",
+        borderColor: "$border",
       },
       form: {
         background: "$background",
         color: "$text",
+        borderColor: "$border",
       },
     },
   },

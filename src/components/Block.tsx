@@ -1,7 +1,7 @@
 import { CSS } from "@stitches/react";
-import { ReactNode } from "react";
+import { ReactNode, RefObject } from "react";
 
-import { styled, theme } from "@/styles/stitches.config"; // Ensure this is correctly imported
+import { styled, theme } from "@/styles/stitches.config";
 
 interface BlockProps {
   align?: "left" | "center" | "right" | "justify";
@@ -18,6 +18,7 @@ interface BlockProps {
     | "space-between"
     | "space-around"
     | "space-evenly";
+  ref?: RefObject<HTMLDivElement>;
   top?: keyof typeof theme.space;
 }
 
@@ -43,10 +44,12 @@ export const Block = ({
   flexAlign,
   justify,
   container,
+  ref,
   className,
 }: BlockProps): JSX.Element => {
   return (
     <BlockStyled
+      ref={ref}
       className={className}
       container={container}
       css={{

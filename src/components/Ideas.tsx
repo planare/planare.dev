@@ -22,11 +22,26 @@ const IdeasInnerStyled = styled("div", {
   display: "flex",
   justifyContent: "space-around",
   minWidth: "100%",
+  alignItems: "center",
   gap: "3rem",
   animation: `${scrollAnimation} 160s linear infinite`,
   "&:hover": {
     animationPlayState: "paused",
   },
+  h2: {
+    color: "$background",
+    WebkitTextStroke: "0.1rem rgb(1, 1, 99)",
+    transition: "all 0.2s ease-in-out",
+    marginBottom: "0 !important",
+    "&:hover": {
+      color: "$text",
+      WebkitTextStroke: "0.1rem rgba(255, 255, 255, 0.1)",
+    },
+  },
+});
+
+const IdeasInnerDuplicateStyled = styled(IdeasInnerStyled, {
+  animationDelay: "80s",
 });
 
 export function Ideas(): JSX.Element {
@@ -34,18 +49,18 @@ export function Ideas(): JSX.Element {
     <IdeasStyled>
       <IdeasInnerStyled>
         {ideasData.map((idea, index) => (
-          <Typography key={index} variant="h1">
+          <Typography key={index} variant="h2">
             {idea}
           </Typography>
         ))}
       </IdeasInnerStyled>
-      <IdeasInnerStyled aria-hidden="true">
+      <IdeasInnerDuplicateStyled aria-hidden="true">
         {ideasData.map((idea, index) => (
           <Typography key={`duplicate-${index}`} variant="h1">
             {idea}
           </Typography>
         ))}
-      </IdeasInnerStyled>
+      </IdeasInnerDuplicateStyled>
     </IdeasStyled>
   );
 }

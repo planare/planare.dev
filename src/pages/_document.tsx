@@ -1,8 +1,8 @@
 /* eslint-disable react/no-danger */
 import NextDocument, { DocumentContext, Head, Html, Main, NextScript } from "next/document";
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 
-import { getCssText } from "../styles/stitches.config";
+import { getCssText } from "@/styles/stitches.config";
 
 type Props = {
   css: string;
@@ -16,7 +16,6 @@ class Document extends NextDocument<Props> {
 
     return { ...page, css };
   }
-
   render(): ReactElement {
     const domain = "https://planare.dev";
     const title = "Planare";
@@ -26,15 +25,10 @@ class Document extends NextDocument<Props> {
     return (
       <Html lang="en">
         <Head>
-          <meta charSet="utf-8" />
-
-          <meta
-            content="Planare is a web development office based in New York. We focus on helping startups and not-for-profits to build apps and websites that scale."
-            name="description"
-          />
-
           <style dangerouslySetInnerHTML={{ __html: " " + this.props.css }} id="stitches" />
 
+          <meta charSet="utf-8" />
+          <meta content={description} name="description" />
           <meta content={domain} property="og:url" />
           <meta content={title} property="og:title" />
           <meta content={description} property="og:description" />
@@ -42,12 +36,10 @@ class Document extends NextDocument<Props> {
           <meta content={`${domain}/meta.jpg`} property="og:image" />
           <meta content="website" property="og:type" />
           <meta content="en_US" property="og:locale" />
-
           <meta content="summary" name="twitter:card" />
           <meta content="Planare" name="twitter:title" />
           <meta content={description} name="twitter:description" />
           <meta content={`${domain}/meta.jpg`} name="twitter:image" />
-
           <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
           <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
           <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />

@@ -1,7 +1,7 @@
 import { CSS } from "@stitches/react";
 import { ReactNode } from "react";
 
-import { styled, theme } from "@/styles/stitches.config"; // Adjust the import path as necessary
+import { styled, theme } from "@/styles/stitches.config";
 
 interface TypographyProps {
   bottom?: keyof typeof theme.space;
@@ -36,6 +36,9 @@ const TypographyStyled = styled("span", {
         lineHeight: "1.2",
         marginBottom: "$normal",
         "&:last-child": { marginBottom: 0 },
+        phone: {
+          fontSize: "2.4rem",
+        },
       },
       h2: {
         fontSize: "2.5rem",
@@ -43,6 +46,9 @@ const TypographyStyled = styled("span", {
         lineHeight: "1.3",
         marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
+        phone: {
+          fontSize: "2.2rem",
+        },
       },
       h3: {
         fontSize: "2rem",
@@ -50,64 +56,54 @@ const TypographyStyled = styled("span", {
         lineHeight: "1.35",
         marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
+        phone: {
+          fontSize: "1.8rem",
+        },
       },
       h4: {
         fontSize: "1.7rem",
         fontWeight: 600,
         lineHeight: "1.4",
-        marginBottom: "$smaller",
+        marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
       },
       h5: {
         fontSize: "1.3rem",
         fontWeight: 500,
         lineHeight: "1.5",
-        marginBottom: "$smaller",
+        marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
       },
       h6: {
         fontSize: "1.2rem",
         fontWeight: 500,
         lineHeight: "1.6",
-        marginBottom: "$smaller",
+        marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
       },
       p: {
         fontSize: "1.1rem",
         lineHeight: "1.6",
-        marginBottom: "$smaller",
+        marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
       },
-      ul: { paddingLeft: "20px" },
+      ul: { paddingLeft: "20px", listStyleType: "disc", listStylePosition: "inside" },
       ol: { paddingLeft: "20px" },
       li: { marginBottom: "0.5rem" },
       small: {
-        fontSize: "0.9rem",
+        fontSize: "1rem",
         opacity: 0.8,
         lineHeight: "1.5",
+        display: "block",
         marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
       },
       code: { fontFamily: "monospace" },
       span: {},
     },
-    top: {
-      large: { marginTop: "$large" },
-      largest: { marginTop: "$largest" },
-      normal: { marginTop: "$normal" },
-      small: { marginTop: "$small" },
-      smallest: { marginTop: "$smallest" },
-    },
-    bottom: {
-      large: { marginBottom: "$large" },
-      largest: { marginBottom: "$largest" },
-      normal: { marginBottom: "$normal" },
-      small: { marginBottom: "$small" },
-      smallest: { marginBottom: "$smallest" },
-    },
     inline: {
       true: { display: "inline-block", marginBottom: "0 !important" },
-      false: { display: "block" },
+      false: {},
     },
   },
 });
@@ -129,6 +125,7 @@ export const Typography = ({
         marginRight: inline ? `$${inline}` : undefined,
         ...css,
       }}
+      inline={inline ? "true" : "false"}
       variant={variant}>
       {children}
     </TypographyStyled>
