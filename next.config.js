@@ -10,6 +10,12 @@ const nextConfig = {
         destination: "https://billing.stripe.com/p/login/3cs8zxaGw0eQ6ZydQQ",
         permanent: true,
       },
+      {
+        source: "/portfolio",
+        destination:
+          "https://tome.app/planare/planare-mid-2024-portfolio-cly4zfrfy0j9utjpxmc03vayx",
+        permanent: true,
+      },
     ];
   },
 };

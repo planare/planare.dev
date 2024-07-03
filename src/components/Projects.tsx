@@ -84,9 +84,13 @@ export function Projects(): JSX.Element {
                 <Typography inline="smallest" variant="h5">
                   {project.title}&nbsp;&nbsp;
                 </Typography>
-                <Badge css={{
-                  whiteSpace: "nowrap",
-                }} variant="alternative">{project.year}</Badge>
+                <Badge
+                  css={{
+                    whiteSpace: "nowrap",
+                  }}
+                  variant="alternative">
+                  {project.year}
+                </Badge>
               </Block>
 
               <Typography

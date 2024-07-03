@@ -4,6 +4,7 @@ import { globalCss, theme } from "./stitches.config";
 
 export const globalFont = Space_Grotesk({
     subsets: ["latin-ext"],
+    
 });
 
 export const globalStyles = globalCss({
