@@ -123,16 +123,28 @@ export function Projects(): JSX.Element {
               <Typography inline="small" variant="span">
                 ▧
               </Typography>
-              Get in touch if you&apos;d like to learn more about our work.
+              Want to see more of our work?
             </Typography>
+            <Block css={{phone: {display: "none"}}}>
+            <Link href="/portfolio">
+              <Button
+                css={{
+                  whiteSpace: "nowrap",
+                }}>
+                2024 Portfolio &rarr;
+              </Button>
+            </Link>
+            </Block>
+            <Block css={{display: "none", phone: {display: "block"}}}>
             <Link href="/contact">
               <Button
                 css={{
                   whiteSpace: "nowrap",
                 }}>
-                Contact &rarr;
+                Contact Us &rarr;
               </Button>
             </Link>
+          </Block>
           </Block>
         </Card>
       </Block>
