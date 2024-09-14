@@ -1,4 +1,4 @@
-import { CSS } from "@stitches/react";
+import { type CSS } from "@stitches/react";
 import { ReactNode } from "react";
 
 import { styled } from "@/styles/stitches.config";

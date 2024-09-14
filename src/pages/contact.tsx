@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Balancer from "react-wrap-balancer";
+import { Balancer } from "react-wrap-balancer";
 
 import { Main } from "../components/Main";
 import { TallyWidget } from "../components/Tally";

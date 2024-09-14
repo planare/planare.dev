@@ -1,35 +1,67 @@
-/* eslint-disable react/no-danger */
-import React from "react";
+import { useEffect } from "react";
 
-const TallyWidget = ({ tallyCode }: { tallyCode: string }): JSX.Element => {
+import { Block } from "./Block";
+
+declare global {
+  interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    Tally: any;
+  }
+}
+
+export function TallyWidget({
+  height = 400,
+  tallyCode,
+}: {
+  height?: number;
+  tallyCode: string;
+}): JSX.Element {
+  useEffect(() => {
+    let script: HTMLScriptElement | null = null;
+
+    if (typeof window !== "undefined") {
+      script = document.createElement("script");
+      script.src = "https://tally.so/widgets/embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+
+      script.onload = (): void => {
+        if (typeof window !== "undefined" && typeof window.Tally !== "undefined") {
+          window.Tally.loadEmbeds();
+        }
+      };
+
+      script.onerror = (): void => {
+        // eslint-disable-next-line no-console
+        console.error("Failed to load Tally script");
+      };
+    }
+
+    return (): void => {
+      if (script) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
-    <>
+    <Block
+      css={{
+        width: "100%",
+        margin: "0 auto",
+      }}>
       <iframe
         data-tally-src={`https://tally.so/embed/${tallyCode}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`}
-        frameBorder="0"
-        height="410"
+        height={height}
         loading="lazy"
-        title="Form"
+        style={{
+          border: "none",
+          width: "100%",
+          margin: "0 auto",
+        }}
+        title="planare.dev"
         width="100%"
       />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-          var d=document,w="https://tally.so/widgets/embed.js",v=function(){
-            "undefined"!=typeof Tally? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){
-              e.src=e.dataset.tallySrc
-            });
-          };
-          if("undefined"!=typeof Tally)v();
-          else if(!d.querySelector('script[src="'+w+'"]')){
-            var s=d.createElement("script");
-            s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);
-          }
-        `,
-        }}
-      />
-    </>
+    </Block>
   );
-};
-
-export { TallyWidget };
+}
