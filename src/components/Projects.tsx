@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { type JSX } from "react";
 
 import { projectsData } from "../data/projects";
 

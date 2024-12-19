@@ -8,25 +8,25 @@
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
-    "@vercel/analytics": "^1.3.1",
-    "next": "^14.2.11",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@vercel/analytics": "^1.4.1",
+    "next": "15.1.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-wrap-balancer": "^1.1.1",
     "sharp": "^0.33.5",
     "swr": "^2.2.5",
-    "typescript": "^5.6.2",
-    "vercel": "^37.4.2"
+    "typescript": "^5.7.2",
+    "vercel": "^37.14.0"
   },
   "devDependencies": {
-    "@next/env": "^14.2.11",
-    "@types/node": "^22.5.5",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
-    "eslint": "^8.57.0",
+    "@next/env": "15.1.1",
+    "@types/node": "^22.10.2",
+    "@types/react": "19.0.2",
+    "@types/react-dom": "19.0.2",
+    "eslint": "^8.57.1",
     "eslint-config-dolmios": "^1.11.1",
     "next-sitemap": "^4.2.3",
-    "prettier": "^3.3.3"
+    "prettier": "^3.4.2"
   },
   "homepage": "https://planare.dev",
   "keywords": [
@@ -45,7 +45,7 @@
   },
   "scripts": {
     "build": "next build",
-    "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && next dev -p 420",
+    "dev": "echo '⚡️ Fetching device IP for development...' && ipconfig getifaddr en0 && echo '🫡' && next dev --turbopack -p 420",
     "env:link": "vercel link",
     "env:local": "vercel env pull .env.local",
     "lint": "eslint . --ext js,jsx,ts,tsx --fix",
@@ -58,5 +58,11 @@
     "extends": [
       "dolmios"
     ]
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.0.2",
+      "@types/react-dom": "19.0.2"
+    }
   }
 }

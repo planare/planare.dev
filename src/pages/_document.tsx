@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/no-danger */
 import NextDocument, { DocumentContext, Head, Html, Main, NextScript } from "next/document";
 import { ReactElement } from "react";
@@ -9,14 +10,13 @@ type Props = {
 };
 
 class Document extends NextDocument<Props> {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static async getInitialProps({ renderPage }: DocumentContext): Promise<any> {
     const page = await renderPage();
     const css = getCssText();
 
     return { ...page, css };
   }
-  render(): ReactElement {
+  render(): ReactElement<any> {
     const domain = "https://planare.dev";
     const title = "Planare";
     const description =

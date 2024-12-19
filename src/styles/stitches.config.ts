@@ -13,7 +13,7 @@ export const { styled, keyframes, globalCss, getCssText, theme } = createStitche
         colors: {
             background: 'rgb(255,255,255)',
             text: '#010163',
-            accent: 'rgb(210, 205, 255)',
+            accent: 'rgb(228, 225, 253)',
             overlay: 'rgba(1, 1, 99, 0.05)',
             border: 'rgba(1, 1, 99, 0.2)',
         },

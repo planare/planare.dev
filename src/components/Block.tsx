@@ -1,5 +1,5 @@
 import { type CSS } from "@stitches/react";
-import { ReactNode, RefObject } from "react";
+import { ReactNode, RefObject, type JSX } from "react";
 
 import { styled, theme } from "@/styles/stitches.config";
 
@@ -18,7 +18,7 @@ interface BlockProps {
     | "space-between"
     | "space-around"
     | "space-evenly";
-  ref?: RefObject<HTMLDivElement>;
+  ref?: RefObject<HTMLDivElement | null>;
   top?: keyof typeof theme.space;
 }
 

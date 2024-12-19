@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useState, type JSX } from "react";
 
 import { globalFont, globalStyles } from "@/styles/global";
 import { styled } from "@/styles/stitches.config";

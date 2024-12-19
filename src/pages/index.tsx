@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import type { JSX } from "react";
 import { Balancer } from "react-wrap-balancer";
 
 import { Block } from "../components/Block";
@@ -115,9 +116,8 @@ const About = (): JSX.Element => (
           <Typography inline="small" variant="span">
             ▧
           </Typography>
-          Hourly development is billed at $85/hour. Managed hosting starts at $40/month, and domain
-          names start at $40/year. Project packages are customized to your needs and budget,
-          providing a clear, upfront project cost.
+          Project packages are customized to your needs and budget, providing a clear, upfront
+          project cost. Our hourly rate is $125, with a minimum project cost of $3,000.
         </Typography>
         <Link href="/working-with-us">
           <Button>Learn more about working with us &rarr;</Button>

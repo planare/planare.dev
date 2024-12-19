@@ -1,4 +1,5 @@
 import Head from "next/head";
+import type { JSX } from "react";
 
 import { Main } from "../components/Main";
 
@@ -64,7 +65,7 @@ export default function FulfillmentPolicy(): JSX.Element {
           </Typography>
           <Typography variant="li">
             We typically offer several revisions after project delivery to ensure your satisfaction.
-            Additional revisions will be billed at our hourly rate of $85 USD/hour.
+            Additional revisions will be billed at our hourly rate of $125 USD/hour.
           </Typography>
           <Typography variant="li">
             We can tailor a support package to your specific needs, whether it&apos;s routine
@@ -102,7 +103,7 @@ export default function FulfillmentPolicy(): JSX.Element {
             Project packages are billed according to the agreed-upon project cost, with potential
             for installment payments based on milestones.
           </Typography>
-          <Typography variant="li">Hourly services are billed at $85 USD/hour.</Typography>
+          <Typography variant="li">Hourly services are billed at $125 USD/hour.</Typography>
           <Typography variant="li">
             Managed hosting and domain name fees are billed monthly or annually, as agreed upon in
             the project scope.
