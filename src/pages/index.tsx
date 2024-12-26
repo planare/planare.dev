@@ -7,9 +7,9 @@ import { Balancer } from "react-wrap-balancer";
 import { Block } from "../components/Block";
 import { Button } from "../components/Button";
 import { Main } from "../components/Main";
-import { Projects } from "../components/Projects";
 import { Typography } from "../components/Typography";
 
+import { Badge } from "@/components/Badge";
 import { Ideas } from "@/components/Ideas";
 import { Services } from "@/components/Services";
 
@@ -20,7 +20,8 @@ const Hero = (): JSX.Element => (
     css={{
       maxWidth: "75rem",
     }}>
-    <Typography variant="h1">
+    <Badge>WE ARE REVAMPING OUR WEBSITE FOR THE NEW YEAR. STAY TUNED!</Badge>
+    <Typography top="normal" variant="h1">
       <Balancer>
         You have big ideas. We have the development expertise to bring them to life.
       </Balancer>
@@ -173,7 +174,7 @@ export default function Home(): JSX.Element {
         <Hero />
         <Showcase />
         <Services />
-        <Projects />
+
         <Ideas />
         <About />
       </Block>
