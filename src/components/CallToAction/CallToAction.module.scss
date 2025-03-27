@@ -1,0 +1,39 @@
+.wrapper {
+  padding: var(--space-6) 0;
+  background: var(--color-foreground);
+  margin: var(--space-6) 0;
+}
+
+.content {
+  padding: calc(var(--space-6) * 2) var(--space-6);
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: var(--color-muted);
+    margin: var(--space-4) 0 var(--space-6);
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: var(--space-6);
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+    }
+  }
+} 

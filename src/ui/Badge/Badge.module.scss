@@ -1,0 +1,42 @@
+@use '../variables' as *;
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+}
+
+.default {
+  background: var(--color-hover);
+  color: var(--color-muted);
+}
+
+.success {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.error {
+  background: var(--color-success-bg);
+  color: var(--color-error);
+}
+
+.badge svg {
+  width: 14px;
+  height: 14px;
+}
+
+// Inline spacing variants
+.inline {
+  &-1 { margin-right: var(--space-1); }
+  &-2 { margin-right: var(--space-2); }
+  &-3 { margin-right: var(--space-3); }
+  &-4 { margin-right: var(--space-4); }
+  &-5 { margin-right: var(--space-5); }
+  &-6 { margin-right: var(--space-6); }
+} 

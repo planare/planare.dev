@@ -1,0 +1,35 @@
+.main {
+  min-height: 100vh;
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  max-width: 65ch;
+  text-align: center;
+
+  h1 {
+    margin: var(--space-4) 0 var(--space-2);
+    font-size: 2rem;
+  }
+
+  p {
+    color: var(--color-muted);
+    margin-bottom: var(--space-4);
+  }
+}
+
+.link {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-foreground);
+  color: var(--color-background);
+  border-radius: var(--radius-2);
+  transition: opacity var(--transition-speed) ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+} 
