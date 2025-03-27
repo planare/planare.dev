@@ -47,8 +47,8 @@ export function TallyWidget({
   return (
     <Block
       css={{
-        width: "100%",
         margin: "0 auto",
+        width: "100%",
       }}>
       <iframe
         data-tally-src={`https://tally.so/embed/${tallyCode}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`}
@@ -56,8 +56,8 @@ export function TallyWidget({
         loading="lazy"
         style={{
           border: "none",
-          width: "100%",
           margin: "0 auto",
+          width: "100%",
         }}
         title="planare.dev"
         width="100%"

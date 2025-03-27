@@ -1,7 +1,6 @@
+import { styled, theme } from "@/styles/stitches.config";
 import { type CSS } from "@stitches/react";
 import { ReactNode, type JSX } from "react";
-
-import { styled, theme } from "@/styles/stitches.config";
 
 interface BadgeProps {
   children: ReactNode;
@@ -11,27 +10,27 @@ interface BadgeProps {
 }
 
 const BadgeStyled = styled("span", {
-  color: "$text",
   border: "0.1rem solid $border",
-  padding: "0.25rem 0.5rem",
   borderRadius: "$small",
-  fontSize: "0.85rem",
+  color: "$text",
   display: "inline-flex",
+  fontSize: "0.85rem",
+  padding: "0.25rem 0.5rem",
 
   variants: {
     variant: {
-      default: {
-        backgroundColor: "transparent",
-      },
       alternative: {
         backgroundColor: "$accent",
         borderColor: "$accent",
+      },
+      default: {
+        backgroundColor: "transparent",
       },
     },
   },
 });
 
-export const Badge = ({ children, inline, variant = "default", css }: BadgeProps): JSX.Element => {
+export const Badge = ({ children, css, inline, variant = "default" }: BadgeProps): JSX.Element => {
   return (
     <BadgeStyled
       css={{

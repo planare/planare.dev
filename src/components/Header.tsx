@@ -1,47 +1,44 @@
-import Image from "next/image";
-import Link from "next/link";
 import type { JSX } from "react";
 
-import logo from "../../public/logo-2024.png";
+import { styled } from "@/styles/stitches.config";
+import Image from "next/image";
+import Link from "next/link";
 
+import logo from "../../public/logo-2024-inverse.png";
 import { Block } from "./Block";
 import { Button } from "./Button";
 import { Typography } from "./Typography";
 
-import { styled } from "@/styles/stitches.config";
-
 const HeaderStyled = styled("header", {
-  padding: "$small $normal 0 $normal",
-  display: "flex",
-
-  margin: "0 auto",
-
-  justifyContent: "space-between",
-  alignItems: "center",
-
-  a: {
-    "&:hover": {
-      textDecoration: "underline",
-      opacity: 0.8,
-    },
-  },
-
   ".logo": {
-    background: "$background",
-    border: "2px solid $background",
-    padding: "0.25rem 0.5rem",
+    "&:hover": {
+      borderColor: "$border",
+    },
+    border: "2px solid transparent",
     borderRadius: "$normal",
-    transition: "all 0.2s ease-in-out",
-
     img: {
       borderRadius: "0",
     },
 
+    padding: "0.25rem 0.5rem",
+
+    transition: "all 0.2s ease-in-out",
+  },
+  a: {
     "&:hover": {
-      background: "rgba(255,255,255, 0.85)",
-      borderColor: "$text",
+      opacity: 0.8,
+      textDecoration: "underline",
     },
   },
+
+  alignItems: "center",
+
+  display: "flex",
+  justifyContent: "space-between",
+
+  margin: "0 auto",
+
+  padding: "$small $normal 0 $normal",
 
   phone: {
     flexDirection: "column",
@@ -72,7 +69,7 @@ export function Header(): JSX.Element {
         </a>
 
         <Link href="/new-projects">
-          <Button type="button">
+          <Button type="button" variant="minimal">
             {" "}
             <Typography inline="smallest" variant="span">
               ▧

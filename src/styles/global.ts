@@ -10,37 +10,37 @@ export const globalFont = Space_Grotesk({
 export const globalStyles = globalCss({
     '*': {
         boxSizing: 'border-box',
-        MozOsxFontSmoothing: 'grayscale',
-        WebkitFontSmoothing: 'antialiased',
         fontDisplay: 'swap',
         marginBlockStart: 0,
-    },
-    'body': {
-        padding: 0,
-        margin: 0,
-        fontFamily: theme.fonts.primary,
-        lineHeight: '1.4',
-        fontSize: '17px',
-        color: theme.colors.text,
-        backgroundColor: theme.colors.background,
+        MozOsxFontSmoothing: 'grayscale',
+        WebkitFontSmoothing: 'antialiased',
     },
     'a, a:visited, a:active': {
         color: 'inherit',
-        transition: 'all 0.2s ease',
         textDecoration: 'none',
+        transition: 'all 0.2s ease',
     },
     'a:hover': {
         opacity: 0.8,
     },
+    'body': {
+        backgroundColor: theme.colors.background,
+        color: theme.colors.text,
+        fontFamily: theme.fonts.primary,
+        fontSize: '17px',
+        lineHeight: '1.4',
+        margin: 0,
+        padding: 0,
+    },
     'img': {
-        maxWidth: '100%',
-        display: 'block',
         borderRadius: '0.75rem',
+        display: 'block',
+        maxWidth: '100%',
     },
     'svg': {
-        width: "1.6rem",
         height: "1.6rem",
-        verticalAlign: "middle",
         marginRight: "0.5rem",
+        verticalAlign: "middle",
+        width: "1.6rem",
 }
 });

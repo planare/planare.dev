@@ -1,13 +1,13 @@
-import Head from "next/head";
 import type { JSX } from "react";
-import { Balancer } from "react-wrap-balancer";
-
-import { Main } from "../components/Main";
-import { TallyWidget } from "../components/Tally";
 
 import { Block } from "@/components/Block";
 import { Card } from "@/components/Card";
 import { Typography } from "@/components/Typography";
+import Head from "next/head";
+import { Balancer } from "react-wrap-balancer";
+
+import { Main } from "../components/Main";
+import { TallyWidget } from "../components/Tally";
 
 const Title = (): JSX.Element => (
   <Block
@@ -32,7 +32,7 @@ const Form = (): JSX.Element => (
     css={{
       width: "100%",
     }}>
-    <Card variant="form">
+    <Card>
       <Block top="normal">
         <TallyWidget tallyCode="3NAvMj" />
       </Block>
@@ -50,8 +50,8 @@ export default function NewProjects(): JSX.Element {
       <Block
         bottom="largest"
         css={{
-          gap: "$large",
           display: "grid",
+          gap: "$large",
           gridTemplateColumns: "1fr",
           width: "100%",
         }}

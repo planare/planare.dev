@@ -1,37 +1,41 @@
-import Image from "next/image";
-import Link from "next/link";
 import type { JSX } from "react";
 
-import logo from "../../public/logo-2024-inverse.png";
+import { styled } from "@/styles/stitches.config";
+import Image from "next/image";
+import Link from "next/link";
 
+import logo from "../../public/logo-2024.png";
 import { Block } from "./Block";
 import { Typography } from "./Typography";
 
-import { styled } from "@/styles/stitches.config";
-
 const FooterStyled = styled("footer", {
-  padding: "$normal",
-  background: "#05052b",
+  alignItems: "center",
+  background: "$accent",
+  borderTop: "0.1rem solid $border",
   color: "$background",
-  fontSize: "0.9rem",
   display: "flex",
   flexDirection: "row",
+  fontSize: "0.9rem",
   gap: "$small",
+  img: {
+    borderRadius: "0",
+  },
   justifyContent: "space-between",
-  alignItems: "center",
-  width: "100%",
+  padding: "$small $normal",
 
   phone: {
-    padding: "$normal",
+    alignItems: "center",
     flexDirection: "column",
     gap: "$normal",
-    justifyContent: "center",
-    alignItems: "center",
-
     img: {
       margin: "0 auto",
     },
+    justifyContent: "center",
+
+    padding: "$normal",
   },
+
+  width: "100%",
 });
 
 export const Footer = (): JSX.Element => {

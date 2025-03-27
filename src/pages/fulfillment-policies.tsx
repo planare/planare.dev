@@ -1,10 +1,10 @@
-import Head from "next/head";
 import type { JSX } from "react";
-
-import { Main } from "../components/Main";
 
 import { Block } from "@/components/Block";
 import { Typography } from "@/components/Typography";
+import Head from "next/head";
+
+import { Main } from "../components/Main";
 
 export default function FulfillmentPolicy(): JSX.Element {
   return (

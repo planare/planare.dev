@@ -1,21 +1,19 @@
+import { styled } from "@/styles/stitches.config";
 import Image from "next/image";
 import Link from "next/link";
 import React, { type JSX } from "react";
 
 import { projectsData } from "../data/projects";
-
 import { Badge } from "./Badge";
 import { Block } from "./Block";
 import { Button } from "./Button";
 import { Card } from "./Card";
 import { Typography } from "./Typography";
 
-import { styled } from "@/styles/stitches.config";
-
 const ProjectsStyled = styled(Block, {
-  width: "100%",
-  position: "relative",
   overflow: "hidden",
+  position: "relative",
+  width: "100%",
 });
 
 const ProjectsInnerStyled = styled(Block, {
@@ -24,36 +22,36 @@ const ProjectsInnerStyled = styled(Block, {
   gap: "$normal",
   phone: {
     flexDirection: "row",
+    gap: "$small",
+    justifyContent: "flex-start",
     overflowX: "auto",
     scrollSnapType: "x mandatory",
-    justifyContent: "flex-start",
-    gap: "$small",
   },
 });
 
 const ProjectsCardStyled = styled("div", {
-  display: "grid",
-  gridTemplateColumns: "31% auto",
-  gap: "$normal",
-  alignItems: "center",
-  textAlign: "left",
-  margin: "0 auto",
-
-  img: {
-    transition: "all 0.3s ease",
-  },
   "&:hover": {
     img: {
       transform: "scale(1.02)",
     },
   },
-  phone: {
-    display: "flex",
-    alignItems: "flex-start",
-    flex: "0 0 100%",
-    scrollSnapAlign: "start",
-    flexDirection: "column",
+  alignItems: "center",
+  display: "grid",
+  gap: "$normal",
+  gridTemplateColumns: "31% auto",
+  img: {
+    transition: "all 0.3s ease",
   },
+
+  margin: "0 auto",
+  phone: {
+    alignItems: "flex-start",
+    display: "flex",
+    flex: "0 0 100%",
+    flexDirection: "column",
+    scrollSnapAlign: "start",
+  },
+  textAlign: "left",
 });
 
 export function Projects(): JSX.Element {
@@ -70,10 +68,10 @@ export function Projects(): JSX.Element {
                   fill
                   src={project.image}
                   style={{
+                    height: "100%",
                     objectFit: "cover",
                     objectPosition: "top",
                     width: "100%",
-                    height: "100%",
                   }}
                 />
               </a>
@@ -104,8 +102,8 @@ export function Projects(): JSX.Element {
               </Typography>
               <Block
                 css={{
-                  gap: "$small",
                   flexWrap: "wrap",
+                  gap: "$small",
                   paddingTop: "$small",
                 }}
                 flexAlign="center">

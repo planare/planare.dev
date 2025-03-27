@@ -8,29 +8,30 @@ export function checkBreakpoint(): { isPhone: boolean } {
     };
 }
 
-export const { styled, keyframes, globalCss, getCssText, theme } = createStitches({
+export const { getCssText, globalCss, keyframes, styled, theme } = createStitches({
     theme: {
         colors: {
-            background: 'rgb(255,255,255)',
-            text: '#010163',
             accent: 'rgb(228, 225, 253)',
-            overlay: 'rgba(1, 1, 99, 0.05)',
-            border: 'rgba(1, 1, 99, 0.2)',
-        },
-        space: {
-            large: '4rem',
-            largest: '6rem',
-            normal: '2rem',
-            small: '1rem',
-            smallest: '0.5rem',
+            background: '#1f1f5b',
+            border: 'rgba(255, 255, 255, 0.3)',
+            darkest: '#06062a',
+            overlay: 'rgba(255, 255, 255, 0.05)',
+            text: 'rgb(255, 255, 255)',
         },
         fonts: {
             primary: 'Space Grotesk, sans-serif',
         },
         radii: {
-            small: "0.33rem",
-            normal: "0.75rem",
-            large: "1rem",
+            large: "1.5rem",
+            normal: "1rem",
+            small: "0.5rem",
+        },
+        space: {
+            large: '3rem',
+            largest: '6rem',
+            normal: '1.5rem',
+            small: '1rem',
+            smallest: '0.5rem',
         }
     },
     utils: {

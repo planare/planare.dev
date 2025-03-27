@@ -1,35 +1,49 @@
+import { styled } from "@/styles/stitches.config";
 import React, { type JSX } from "react";
 
 import { Block } from "./Block";
 import { Card } from "./Card";
 import { Typography } from "./Typography";
 
-import { styled } from "@/styles/stitches.config";
-
 const services = [
   {
+    description:
+      "Transform your online presence with custom websites that convert visitors into customers. We handle everything from concept to launch.",
+    features: [
+      "Strategic Design & Development",
+      "Proactive Maintenance & Support",
+      "Deployment & Website Hosting",
+      "Shopify & eCommerce Solutions",
+    ],
     title: "Websites",
-    description:
-      "From design and development to ongoing maintenance and hosting, we build websites that elevate your brand and drive results.",
-    features: ["Design & Development", "Maintenance & Support", "Hosting & Management"],
   },
   {
+    description:
+      "We bring your digital product ideas to life through thoughtful development and strategic planning that creates genuine user value.",
+    features: [
+      "Custom Web Applications",
+      "MVP Development & Testing",
+      "Data-Driven Strategy",
+      "User Experience Optimization",
+    ],
     title: "Product",
-    description:
-      "We transform your product vision into reality. Our expertise spans everything from MVP development to product strategy.",
-    features: ["Web Applications", "MVP Development", "Product Strategy"],
   },
   {
-    title: "Consulting",
     description:
-      "Make informed decisions for your digital projects. Our consulting services cover web technologies, UX/UI design, and comprehensive project management.",
-    features: ["Web Technologies", "UX/UI Design", "Project Management"],
+      "Navigate the digital landscape with confidence. Our expert consulting helps you make decisions that drive growth and efficiency.",
+    features: [
+      "Modern Technology Selection",
+      "User-Centered Design Guidance",
+      "End-to-End Project Management",
+      "Performance & Analytics Auditing",
+    ],
+    title: "Consulting",
   },
 ];
 
 const ServicesStyled = styled(Block, {
-  width: "100%",
   overflow: "hidden",
+  width: "100%",
 });
 
 const ServicesInnerStyled = styled(Block, {
@@ -38,17 +52,17 @@ const ServicesInnerStyled = styled(Block, {
   gridTemplateColumns: "repeat(3, 1fr)",
   phone: {
     display: "flex",
+    gap: "15px",
     overflowX: "auto",
     scrollSnapType: "x mandatory",
-    gap: "15px",
   },
 });
 
 const ServiceCardStyled = styled("div", {
   phone: {
+    border: "1px solid $border",
     flex: "0 0 calc(80vw - 15px)",
     scrollSnapAlign: "start",
-    border: "1px solid $border",
   },
 });
 

@@ -1,7 +1,6 @@
+import { styled, theme } from "@/styles/stitches.config";
 import { type CSS } from "@stitches/react";
 import { ReactNode, RefObject, type JSX } from "react";
-
-import { styled, theme } from "@/styles/stitches.config";
 
 interface BlockProps {
   align?: "left" | "center" | "right" | "justify";
@@ -28,24 +27,24 @@ const BlockStyled = styled("div", {
   variants: {
     container: {
       true: {
-        maxWidth: "80rem",
         margin: "0 auto",
+        maxWidth: "80rem",
       },
     },
   },
 });
 
 export const Block = ({
-  children,
-  css,
-  top,
-  bottom,
   align,
+  bottom,
+  children,
+  className,
+  container,
+  css,
   flexAlign,
   justify,
-  container,
   ref,
-  className,
+  top,
 }: BlockProps): JSX.Element => {
   return (
     <BlockStyled
@@ -53,10 +52,10 @@ export const Block = ({
       className={className}
       container={container}
       css={{
-        marginTop: top ? `$${top}` : undefined,
         marginBottom: bottom ? `$${bottom}` : undefined,
+        marginTop: top ? `$${top}` : undefined,
         textAlign: align,
-        ...(flexAlign && { display: "flex", alignItems: flexAlign }),
+        ...(flexAlign && { alignItems: flexAlign, display: "flex" }),
         ...(justify && { justifyContent: justify }),
 
         ...css,

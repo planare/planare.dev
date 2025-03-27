@@ -1,10 +1,10 @@
-import Head from "next/head";
 import type { JSX } from "react";
+
+import { Typography } from "@/components/Typography";
+import Head from "next/head";
 import useSWR from "swr";
 
 import { Main } from "../components/Main";
-
-import { Typography } from "@/components/Typography";
 
 interface IQuotable {
   _id: string;

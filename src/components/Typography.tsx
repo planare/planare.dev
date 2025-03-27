@@ -1,12 +1,12 @@
+import { styled, theme } from "@/styles/stitches.config";
 import { type CSS } from "@stitches/react";
 import { ReactNode, type JSX } from "react";
-
-import { styled, theme } from "@/styles/stitches.config";
 
 interface TypographyProps {
   bottom?: keyof typeof theme.space;
   children: ReactNode;
   css?: CSS;
+  accent?: boolean;
   inline?: keyof typeof theme.space;
   top?: keyof typeof theme.space;
   variant:
@@ -26,106 +26,112 @@ interface TypographyProps {
 }
 
 const TypographyStyled = styled("span", {
-  padding: 0,
   margin: 0,
+  padding: 0,
   variants: {
+    accent: {
+      false: {},
+      true: { color: "$accent" },
+    },
+    inline: {
+      false: {},
+      true: { display: "inline-block", marginBottom: "0 !important" },
+    },
     variant: {
+      code: { fontFamily: "monospace" },
       h1: {
+        "&:last-child": { marginBottom: 0 },
         fontSize: "2.9rem",
         fontWeight: 700,
         lineHeight: "1.2",
         marginBottom: "$normal",
-        "&:last-child": { marginBottom: 0 },
         phone: {
           fontSize: "2.2rem",
         },
       },
       h2: {
+        "&:last-child": { marginBottom: 0 },
         fontSize: "2.5rem",
         fontWeight: 700,
         lineHeight: "1.3",
         marginBottom: "$small",
-        "&:last-child": { marginBottom: 0 },
         phone: {
           fontSize: "2rem",
         },
       },
       h3: {
+        "&:last-child": { marginBottom: 0 },
         fontSize: "2rem",
         fontWeight: 600,
         lineHeight: "1.35",
         marginBottom: "$small",
-        "&:last-child": { marginBottom: 0 },
         phone: {
           fontSize: "1.7rem",
         },
       },
       h4: {
+        "&:last-child": { marginBottom: 0 },
         fontSize: "1.7rem",
         fontWeight: 600,
         lineHeight: "1.4",
         marginBottom: "$small",
-        "&:last-child": { marginBottom: 0 },
         phone: {
           fontSize: "1.5rem",
         },
       },
       h5: {
+        "&:last-child": { marginBottom: 0 },
         fontSize: "1.3rem",
         fontWeight: 500,
         lineHeight: "1.5",
         marginBottom: "$small",
-        "&:last-child": { marginBottom: 0 },
       },
       h6: {
+        "&:last-child": { marginBottom: 0 },
         fontSize: "1.2rem",
         fontWeight: 500,
         lineHeight: "1.6",
         marginBottom: "$small",
-        "&:last-child": { marginBottom: 0 },
       },
+      li: { marginBottom: "0.5rem" },
+      ol: { paddingLeft: "20px" },
       p: {
+        "&:last-child": { marginBottom: 0 },
         fontSize: "1.1rem",
         lineHeight: "1.6",
         marginBottom: "$small",
-        "&:last-child": { marginBottom: 0 },
+        maxWidth: "60rem",
       },
-      ul: { paddingLeft: "20px", listStyleType: "disc", listStylePosition: "inside" },
-      ol: { paddingLeft: "20px" },
-      li: { marginBottom: "0.5rem" },
       small: {
-        fontSize: "1rem",
-        opacity: 0.8,
-        lineHeight: "1.5",
-        display: "block",
-        marginBottom: "$small",
         "&:last-child": { marginBottom: 0 },
+        display: "block",
+        fontSize: "0.95rem",
+        lineHeight: "1.5",
+        marginBottom: "$small",
       },
-      code: { fontFamily: "monospace" },
       span: {},
-    },
-    inline: {
-      true: { display: "inline-block", marginBottom: "0 !important" },
-      false: {},
+      ul: { listStylePosition: "inside", listStyleType: "disc", paddingLeft: "20px" },
     },
   },
 });
 
 export const Typography = ({
-  children,
-  top,
+  accent,
   bottom,
-  inline,
-  variant = "p",
+  children,
   css,
+  inline,
+  top,
+  variant = "p",
 }: TypographyProps): JSX.Element => {
   return (
     <TypographyStyled
+      accent={accent ? "true" : "false"}
       as={variant}
       css={{
-        marginTop: top ? `$${top}` : undefined,
         marginBottom: bottom ? `$${bottom}` : undefined,
         marginRight: inline ? `$${inline}` : undefined,
+        marginTop: top ? `$${top}` : undefined,
         ...css,
       }}
       inline={inline ? "true" : "false"}

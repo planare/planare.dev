@@ -1,7 +1,6 @@
+import { styled, theme } from "@/styles/stitches.config";
 import { type CSS } from "@stitches/react";
 import { ReactNode, type JSX } from "react";
-
-import { styled, theme } from "@/styles/stitches.config";
 
 interface ButtonProps {
   children: ReactNode;
@@ -12,36 +11,38 @@ interface ButtonProps {
 }
 
 const ButtonStyled = styled("button", {
-  borderRadius: "$small",
-  padding: "0.33rem 0.75rem",
-  cursor: "pointer",
-  fontSize: "1rem",
-  transition: "all 0.2s ease",
-  fontWeight: 600,
-  fontFamily: "$primary",
-  position: "relative",
-  display: "inline-flex",
   border: "0.1rem solid transparent",
+  borderRadius: "$small",
+  cursor: "pointer",
+  display: "inline-flex",
+  fontFamily: "$primary",
+  fontSize: "1rem",
+  fontWeight: 600,
+  padding: "0.33rem 0.75rem",
+  position: "relative",
+  transition: "all 0.2s ease",
 
   variants: {
     variant: {
-      minimal: {
-        background: "$background",
-        color: "$text",
-        "&:hover": {
-          background: "$text",
-          color: "$background",
-          borderColor: "$text",
-        },
-      },
       default: {
+        "&:hover": {
+          background: "$accent",
+          borderColor: "$border",
+          color: "$background",
+        },
         background: "$text",
+        borderColor: "$border",
         color: "$background",
+      },
+      minimal: {
         "&:hover": {
           background: "$background",
+          borderColor: "$border",
           color: "$text",
-          borderColor: "$text",
         },
+        background: "$accent",
+        borderColor: "$border",
+        color: "$background",
       },
     },
   },

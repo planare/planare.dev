@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/no-danger */
+import { getCssText } from "@/styles/stitches.config";
 import NextDocument, { DocumentContext, Head, Html, Main, NextScript } from "next/document";
 import { ReactElement } from "react";
-
-import { getCssText } from "@/styles/stitches.config";
 
 type Props = {
   css: string;

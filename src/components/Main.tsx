@@ -1,15 +1,14 @@
-import { ReactNode, type JSX } from "react";
-
 import { styled } from "@/styles/stitches.config";
+import { ReactNode, type JSX } from "react";
 
 interface MainProps {
   children: ReactNode;
 }
 
 const MainStyled = styled("div", {
-  padding: "0 $normal",
-  minHeight: "90vh",
   margin: "0 auto",
+  minHeight: "90vh",
+  padding: "0 $normal",
 });
 
 export const Main = ({ children }: MainProps): JSX.Element => {

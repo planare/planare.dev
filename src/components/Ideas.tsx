@@ -1,9 +1,8 @@
+import { ideasData } from "@/data/ideas";
+import { styled, keyframes } from "@/styles/stitches.config";
 import React, { type JSX } from "react";
 
 import { Typography } from "./Typography";
-
-import { ideasData } from "@/data/ideas";
-import { styled, keyframes } from "@/styles/stitches.config";
 
 const scrollAnimation = keyframes({
   "0%": { transform: "translateX(0)" },
@@ -12,32 +11,32 @@ const scrollAnimation = keyframes({
 
 const IdeasStyled = styled("div", {
   display: "flex",
+  gap: "3rem",
   overflow: "hidden",
   userSelect: "none",
-  gap: "3rem",
 });
 
 const IdeasInnerStyled = styled("div", {
-  flexShrink: 0,
-  display: "flex",
-  justifyContent: "space-around",
-  minWidth: "100%",
-  alignItems: "center",
-  gap: "3rem",
-  animation: `${scrollAnimation} 160s linear infinite`,
   "&:hover": {
     animationPlayState: "paused",
   },
+  alignItems: "center",
+  animation: `${scrollAnimation} 160s linear infinite`,
+  display: "flex",
+  flexShrink: 0,
+  gap: "3rem",
   h2: {
-    color: "$background",
-    WebkitTextStroke: "0.1rem rgb(1, 1, 99)",
-    transition: "all 0.2s ease-in-out",
-    marginBottom: "0 !important",
     "&:hover": {
       color: "$text",
       WebkitTextStroke: "0.1rem rgba(255, 255, 255, 0.1)",
     },
+    color: "$darkest",
+    marginBottom: "0 !important",
+    transition: "all 0.2s ease-in-out",
+    WebkitTextStroke: "0.1rem #fff",
   },
+  justifyContent: "space-around",
+  minWidth: "100%",
 });
 
 const IdeasInnerDuplicateStyled = styled(IdeasInnerStyled, {

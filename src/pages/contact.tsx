@@ -1,14 +1,14 @@
-import Head from "next/head";
 import type { JSX } from "react";
-import { Balancer } from "react-wrap-balancer";
-
-import { Main } from "../components/Main";
-import { TallyWidget } from "../components/Tally";
 
 import { Block } from "@/components/Block";
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { Typography } from "@/components/Typography";
+import Head from "next/head";
+import { Balancer } from "react-wrap-balancer";
+
+import { Main } from "../components/Main";
+import { TallyWidget } from "../components/Tally";
 
 const Title = (): JSX.Element => (
   <Block
@@ -28,8 +28,8 @@ const Title = (): JSX.Element => (
       css={{
         gap: "$small",
         phone: {
-          flexDirection: "column",
           alignItems: "center",
+          flexDirection: "column",
         },
       }}
       flexAlign="center"
@@ -55,7 +55,7 @@ const Form = (): JSX.Element => (
     css={{
       width: "100%",
     }}>
-    <Card variant="form">
+    <Card>
       <Block top="normal">
         <TallyWidget tallyCode="n9dP2V" />
       </Block>
@@ -73,8 +73,8 @@ export default function Contact(): JSX.Element {
       <Block
         bottom="largest"
         css={{
-          gap: "$large",
           display: "grid",
+          gap: "$large",
           gridTemplateColumns: "1fr",
           width: "100%",
         }}
