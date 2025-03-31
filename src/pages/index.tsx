@@ -86,7 +86,7 @@ const About = (): JSX.Element => (
       <Block
         css={{
           phone: {
-            width: "100%",
+            width: "100% !important",
           },
           width: "70%",
         }}>
@@ -126,7 +126,7 @@ const About = (): JSX.Element => (
         css={{
           height: "100%",
           phone: {
-            width: "100%",
+            width: "100% !important",
           },
           position: "relative",
           width: "30%",
